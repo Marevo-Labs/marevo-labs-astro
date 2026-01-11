@@ -52,7 +52,12 @@ function isActivePath(currentPath: string): boolean {
       </a>
 
       <!-- Menu toggle checkbox (hidden, must be sibling of menu for peer to work) -->
-      <input type="checkbox" id="mobile-menu-toggle" class="peer sr-only" />
+      <input
+        type="checkbox"
+        id="mobile-menu-toggle"
+        class="peer sr-only"
+        aria-label="Toggle navigation menu"
+      />
 
       <!-- Menu toggle wrapper -->
       <div

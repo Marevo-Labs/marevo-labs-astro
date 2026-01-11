@@ -64,7 +64,7 @@ const {
       >
         {
           mobileImage && (
-            <source src={mobileImage.src} media="(max-width: 1024px)" />
+            <source srcset={mobileImage.src} media="(max-width: 1024px)" />
           )
         }
         <img
