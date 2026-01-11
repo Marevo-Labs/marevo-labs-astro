@@ -1,0 +1,67 @@
+---
+// List
+// ------------
+// Description: the list component is a ui element that displays a list of items in a vertical order.
+// Properties:
+// - Type: the type of the list (basic, checklist)
+// - ListItems: the list items of the list
+// - classes: additional classes
+// - listColor: the color of the marker (primary, zinc, white)
+
+// Components
+// - UI
+import { CheckCircle } from "lucide-react"
+
+// Props
+type Props = {
+  type?: "basic" | "checklist"
+  listItems: Array<any>
+  classes?: string
+  listColor?: "primary" | "zinc" | "white"
+}
+const {
+  type = "basic",
+  listColor = "primary",
+  listItems,
+  classes,
+} = Astro.props
+---
+
+<ul
+  class:list={[
+    "[&_li]:mb-2 [&_li]:ml-4 [&_li]:list-disc [&_li]:text-zinc-700 dark:[&_li]:text-zinc-50",
+    {
+      "[&_li]:flex [&_li]:items-start [&_li]:gap-2 [&_svg]:h-6 [&_svg]:w-6 [&_svg]:shrink-0 [&_svg]:p-1 [&_svg]:text-primary-500":
+        type === "checklist",
+    },
+    {
+      "[&_svg]:text-primary-500 [&_li]:marker:text-primary-500":
+        listColor === "primary" && type === "checklist",
+    },
+    {
+      "[&_svg]:text-white [&_li]:marker:text-white":
+        listColor === "white" && type === "checklist",
+    },
+    {
+      "[&_svg]:text-zinc-500 [&_li]:marker:text-zinc-500":
+        listColor === "zinc" && type === "checklist",
+    },
+    {
+      "[&_li]:marker:text-primary-500":
+        listColor === "primary" && type === "basic",
+    },
+    { "[&_li]:marker:text-white": listColor === "white" && type === "basic" },
+    {
+      "[&_li]:marker:text-zinc-500": listColor === "zinc" && type === "basic",
+    },
+    { [`${classes}`]: classes },
+  ]}
+>
+  {
+    listItems.map((item) => (
+      <li>
+        {type === "checklist" && <CheckCircle />} {item.listItem}
+      </li>
+    ))
+  }
+</ul>

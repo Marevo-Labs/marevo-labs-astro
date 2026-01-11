@@ -1,0 +1,164 @@
+---
+import { ChevronDownIcon } from "lucide-react"
+import Button from "@/components/ui/button.astro"
+import Switcher from "./ModeSwitcher.astro"
+import Logo from "./Logo"
+
+const navigationBarData = {
+  navItems: [
+    { name: "Home", link: "/" },
+    {
+      name: "About",
+      link: "#",
+      submenu: [
+        { name: "About Us", link: "/about" },
+        { name: "Our Mission", link: "/mission" },
+        { name: "FAQs", link: "/faqs" },
+        { name: "Reviews", link: "/reviews" },
+      ],
+    },
+    { name: "Services", link: "/services" },
+    { name: "Pricing", link: "/pricing" },
+    { name: "Contact", link: "/contact" },
+  ],
+  navActions: [
+    { name: "Get started", link: "/contact", style: "primary", size: "lg" },
+  ],
+}
+
+// Determine current path
+const path = new URL(Astro.request.url).pathname
+function isActivePath(currentPath: string): boolean {
+  return path === currentPath || path === `${currentPath}/`
+}
+---
+
+<header
+  class="text-foreground sticky top-0 z-40 w-full animate-fadeInShadowLight [animation-range:0%_20rem] [animation-timeline:scroll()] before:absolute before:block before:h-full before:w-full before:bg-background/80 before:lg:backdrop-blur-sm after:absolute after:left-0 after:top-full after:z-10 after:block after:h-px after:w-full after:lg:hidden dark:animate-fadeInShadowDark dark:[animation-range:0%_20rem] dark:[animation-timeline:scroll()]"
+>
+  <div class="container relative mx-auto px-6">
+    <nav
+      aria-label="main navigation"
+      role="navigation"
+      class="flex h-22 items-stretch gap-6 font-medium text-zinc-700 lg:justify-between dark:text-zinc-50"
+    >
+      <!-- Logo -->
+      <a
+        href="/"
+        class="flex flex-auto items-center gap-2 whitespace-nowrap py-3 font-headings text-2xl font-black tracking-wider focus:outline-none text-foreground"
+      >
+        <Logo width={256.16666667} height={28.66666667} />
+        <span class="sr-only">Marevo Labs</span>
+      </a>
+
+      <!-- Menu toggle checkbox (hidden, must be sibling of menu for peer to work) -->
+      <input type="checkbox" id="mobile-menu-toggle" class="peer sr-only" />
+
+      <!-- Menu toggle wrapper -->
+      <div
+        class="order-10 lg:hidden flex justify-center peer-checked:[&_label>div>span:nth-child(1)]:w-6 peer-checked:[&_label>div>span:nth-child(1)]:translate-y-0 peer-checked:[&_label>div>span:nth-child(1)]:rotate-45 peer-checked:[&_label>div>span:nth-child(2)]:-rotate-45 peer-checked:[&_label>div>span:nth-child(3)]:w-0"
+      >
+        <!-- Menu toggle button (styled label) -->
+        <label
+          for="mobile-menu-toggle"
+          class="relative block h-10 w-10 cursor-pointer self-center"
+          aria-label="Toggle navigation"
+        >
+          <div
+            class="absolute left-1/2 top-1/2 w-6 -translate-x-1/2 -translate-y-1/2 transform"
+          >
+            <span
+              aria-hidden="true"
+              class="absolute block h-0.5 w-9/12 -translate-y-2 transform rounded-full bg-current transition-all duration-300"
+            ></span>
+            <span
+              aria-hidden="true"
+              class="absolute block h-0.5 w-6 transform rounded-full bg-current transition-all duration-300"
+            ></span>
+            <span
+              aria-hidden="true"
+              class="absolute block h-0.5 w-1/2 origin-top-left translate-y-2 transform rounded-full bg-current transition-all duration-300"
+            ></span>
+          </div>
+        </label>
+      </div>
+
+      <!-- Navigation links -->
+      <ul
+        role="menubar"
+        aria-label="Select page"
+        class="invisible absolute left-0 top-20 z-[-1] ml-auto h-dvh w-full justify-center overflow-hidden overflow-y-auto overscroll-contain bg-white/90 px-8 py-24 font-medium opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:z-1 peer-checked:opacity-100 peer-checked:backdrop-blur-sm lg:visible lg:relative lg:top-0 lg:z-0 lg:flex lg:h-full lg:w-auto lg:items-stretch lg:overflow-visible lg:bg-white/0 lg:px-0 lg:py-0 lg:pt-0 lg:opacity-100 dark:bg-background/90 dark:lg:bg-transparent"
+      >
+        {
+          navigationBarData.navItems.map((item) => (
+            <li
+              role="none"
+              class="group relative flex cursor-pointer flex-col items-stretch lg:flex-row"
+            >
+              {!item.submenu ? (
+                <a
+                  href={item.link}
+                  role="menuitem"
+                  class={`relative flex items-center gap-1 py-4 transition-colors duration-300 hover:text-primary focus:text-primary focus:outline-none focus-visible:outline-none lg:px-6 [&.active]:text-primary ${isActivePath(item.link) ? "active" : ""}`}
+                >
+                  {item.name}
+                </a>
+              ) : (
+                <>
+                  <input
+                    type="checkbox"
+                    id={`submenu-${item.name.toLowerCase().replace(/\s+/g, "-")}`}
+                    class="peer sr-only lg:hidden"
+                  />
+                  <label
+                    for={`submenu-${item.name.toLowerCase().replace(/\s+/g, "-")}`}
+                    role="menuitem"
+                    class={`relative flex cursor-pointer items-center gap-1 py-4 transition-colors duration-300 hover:text-primary focus:text-primary focus:outline-none focus-visible:outline-none lg:cursor-default lg:px-6 [&.active]:text-primary ${isActivePath(item.link) ? "active" : ""}`}
+                  >
+                    {item.name}
+                    <ChevronDownIcon className="h-4 w-4 transition-transform duration-300 peer-checked:rotate-180 lg:group-hover:rotate-180" />
+                  </label>
+                  <ul class="header__submenu left-0 top-full hidden max-h-0 w-full overflow-hidden rounded bg-zinc-300/10 px-4 py-0 opacity-0 transition-all duration-300 peer-checked:block peer-checked:max-h-96 peer-checked:opacity-100 lg:absolute lg:min-w-48 lg:max-h-none lg:rounded-t-none lg:bg-white/90 lg:p-0 lg:opacity-0 lg:shadow-lg lg:shadow-zinc-700/5 lg:backdrop-blur-sm lg:group-hover:block lg:group-hover:opacity-100 dark:bg-zinc-500/10 lg:dark:bg-background/90 lg:dark:shadow-zinc-950/50">
+                    {item.submenu.map((subItem) => (
+                      <li role="none">
+                        <a
+                          href={subItem.link}
+                          role="menuitem"
+                          class={`relative flex items-center gap-1 py-3 transition-colors duration-300 hover:text-primary focus:text-primary focus:outline-none focus-visible:outline-none lg:px-6 lg:py-4 [&.active]:text-primary ${isActivePath(subItem.link) ? "active" : ""}`}
+                        >
+                          {subItem.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
+            </li>
+          ))
+        }
+      </ul>
+
+      <!-- Theme Switcher -->
+      <Switcher />
+
+      <!-- Navigation action buttons -->
+      <div
+        class="fixed bottom-0 left-0 hidden w-full items-center justify-between gap-4 border-t border-zinc-100 bg-white px-6 py-4 lg:relative lg:ml-auto lg:flex lg:w-auto lg:border-none lg:bg-transparent lg:px-0 lg:py-0 dark:border-zinc-800 dark:bg-zinc-950 lg:dark:bg-transparent [.header__menu--open~&]:flex"
+      >
+        {
+          navigationBarData.navActions.map((action) => (
+            <Button
+              className="flex-auto"
+              size="lg"
+              variant="default"
+              href={action.link}
+              type="link"
+            >
+              {action.name}
+            </Button>
+          ))
+        }
+      </div>
+    </nav>
+  </div>
+</header>

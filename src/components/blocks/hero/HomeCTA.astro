@@ -1,0 +1,58 @@
+---
+// Home page CTA Section
+// ------------
+// Description: A centered call to action section that contains: a title, text, a user review snippet, a button and a image.
+
+// Components
+// - Layout
+import Section from "../../ui/Section.astro"
+import Row from "../../ui/Row.astro"
+import Col from "../../ui/Col.astro"
+import { Image } from "astro:assets"
+// - UI
+import Button from "../../ui/button.astro"
+import heroImage from "../../../assets/hero-01.png"
+---
+
+<Section id="intro" padding="top" classes="bg-zinc-50 dark:bg-zinc-900">
+  <Row>
+    <Col span="2" />
+    <Col span="8" align="center" classes="space-y-6">
+      <div
+        class="font-gotham tracking-wide uppercase inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border bg-muted text-sm"
+      >
+        <span class="relative flex size-3">
+          <span
+            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-light-emerald opacity-75"
+          ></span>
+          <span
+            class="relative inline-flex rounded-full size-3 bg-light-emerald"
+          ></span>
+        </span> Now accepting new projects for early 2026
+      </div>
+      <h1 class="font-heading text-4xl sm:text-5xl md:text-6xl">
+        Enhance team <strong class="text-primary">performance</strong> with seamless
+        integration
+      </h1>
+
+      <p class="text-lg">
+        Work smarter, not harder, with our innovative platform
+      </p>
+      <Button size="lg" type="link" href="/contact">Start your project</Button>
+      <Button size="lg" type="link" href="/about" variant="outline"
+        >About Us</Button
+      >
+    </Col>
+    <Col span="2" />
+    <Col span="2" />
+    <Col span="8">
+      <Image
+        src={heroImage}
+        alt="Foxi. The tailwind astro theme"
+        class="translate-y-8 shadow-2xl shadow-zinc-200 dark:shadow-zinc-950"
+        format="webp"
+      /></Col
+    >
+    <Col span="2" />
+  </Row>
+</Section>

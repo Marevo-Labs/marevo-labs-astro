@@ -1,0 +1,170 @@
+---
+// Pricing table
+// ------------
+// Description: The pricing table component allows users to get an overview of what pricing plans are offered and how they differ, on a product or service.
+// Properties:
+// - Title: the title of the pricing plan
+// - Subtitle: the subtitle of the pricing plan
+// - Currency: the currency of the pricing plan
+// - Price: the anual (default)price of the pricing plan
+// - PriceLabel: the label of the anual price
+// - PriceMontly: the monthly price of the pricing plan
+// - PriceLabelMontly: the monthly label
+// - ButtonName: the name of the button
+// - ButtonLink: the link of the button
+// - Type: the type of the pricing plan (basic, featured)
+// - classes: additional classes
+// Reference: https://wind-ui.com/components/pricing/
+
+// Components
+// - UI
+import Button from "../button.astro"
+import List from "../List.astro"
+// -- Partials
+import Header from "./partials/Header.astro"
+import Body from "./partials/Body.astro"
+import Footer from "./partials/Footer.astro"
+
+// Props
+type PricingTableProps = {
+  type: "basic" | "featured"
+  header: {
+    title: string
+    subtitle: string
+    currency: string
+    price: string
+    priceLabel: string
+    priceMontly?: string
+    priceLabelMontly?: string
+    buttonName: string
+    buttonLink: string
+  }
+  body?: {
+    listItems: Array<{ listItem: string }>
+  }
+  footer?: {
+    buttonName: string
+    buttonLink: string
+  }
+}
+type Props = {
+  data: PricingTableProps
+  id?: string
+  listType?: "basic" | "checklist"
+  classes?: string
+}
+const { data, id, listType, classes } = Astro.props
+const { type, header, body, footer } = data
+---
+
+<div
+  id={id}
+  class:list={[
+    "pricing pricing--annualy mx-auto max-w-sm overflow-hidden rounded border border-zinc-100 bg-white text-zinc-500 shadow-xl shadow-zinc-700/5 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-300 dark:shadow-zinc-950/50 [&_.pricing__header-subtitle]:text-zinc-400",
+    { [`pricing--${type}`]: type },
+    { [`${classes}`]: classes },
+    {
+      "!text-primary-foreground !border-primary shadow-primary-500/30 [&_.pricing__header-subtitle]:text-primary/20 shadow-2xl":
+        type === "featured",
+    },
+  ]}
+>
+  <div class="pricing__container flex flex-col">
+    <Header type={type}>
+      <h3
+        class:list={[
+          "pricing__header-title mb-0 text-xl font-bold text-zinc-700 dark:text-zinc-50",
+          {
+            [`pricing__header-title--featured text-primary-50`]:
+              type === "featured",
+          },
+        ]}
+      >
+        <span class="font-gotham uppercase">{header.title}</span>
+
+        <span class="pricing__header-subtitle block text-sm font-normal"
+          >{header.subtitle}</span
+        >
+      </h3>
+      <div class="pricing__header-info h-16 overflow-hidden">
+        <h4
+          class:list={[
+            "pricing__header-info-annualy text-5xl font-bold text-zinc-700 lg:text-6xl dark:text-zinc-50 mb-0 h-16 transition-all duration-300 [.pricing--monthly_&]:-translate-y-16 [.pricing--monthly_&]:opacity-0",
+            { [`text-primary-50`]: type === "featured" },
+          ]}
+        >
+          <span class="pricing__header-currency text-3xl"
+            >{header.currency}</span
+          >
+          <span class="pricing__header-price tracking-tighter"
+            >{header.price}</span
+          >
+          <span class="pricing__header-perTime text-sm"
+            >/{header.priceLabel}</span
+          >
+        </h4>
+        <h4
+          class:list={[
+            "pricing__header-info-monthly text-5xl font-bold text-zinc-700 lg:text-6xl dark:text-zinc-50 mb-0 h-16 opacity-0 transition-all duration-300 [.pricing--monthly_&]:-translate-y-16 [.pricing--monthly_&]:opacity-100",
+            { [`text-primary-50`]: type === "featured" },
+          ]}
+        >
+          <span class="pricing__header-currency text-3xl"
+            >{header.currency}</span
+          >
+          <span class="pricing__header-price tracking-tighter"
+            >{header.priceMontly}</span
+          >
+          <span class="pricing__header-perTime text-sm"
+            >/{header.priceLabelMontly}</span
+          >
+        </h4>
+      </div>
+
+      <Button
+        size="lg"
+        style={type === "featured" ? "secondary" : "primary"}
+        elevated
+        type="link"
+        link={header.buttonLink}
+      >
+        {header.buttonName}
+      </Button>
+    </Header>
+
+    {
+      body && (
+        <Body>
+          <List
+            type={listType}
+            listItems={body.listItems}
+            classes={
+              type === "featured"
+                ? "[&_li]:!text-primary-50 space-y-4"
+                : "space-y-4"
+            }
+            listColor={type === "featured" ? "white" : "primary"}
+          />
+        </Body>
+      )
+    }
+    {
+      footer && (
+        <Footer type={type}>
+          <Button
+            size="lg"
+            style="primary"
+            type="link"
+            link={footer.buttonLink}
+            variation="link"
+            classes={
+              "!font-medium " + (type === "featured" ? "!text-white" : "")
+            }
+          >
+            {footer.buttonName}
+          </Button>
+        </Footer>
+      )
+    }
+  </div>
+</div>

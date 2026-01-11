@@ -1,0 +1,148 @@
+---
+// Imports
+import { ClientRouter } from "astro:transitions"
+import GoogleAnalytics from "../../scripts/googleAnalytics.astro"
+import GoogleTagManagerHead from "../../scripts/googleTagManagerHead.astro"
+import GoogleSearchConsole from "../../scripts/googleSearchConsole.astro"
+// Partials
+import Seo from "./partials/Seo.astro"
+// Data
+import { configData } from "../../../config/config"
+
+import { googleAnalyticsMeasurementID } from "../../../config/analytics"
+import { googleTagManagerID } from "../../../config/analytics"
+
+const manifestData = {
+  manifest: "/manifest.json",
+  icons: {
+    icon: [
+      {
+        url: "/favicon-16x16.png",
+        sizes: "16x16",
+        type: "image/png",
+      },
+      {
+        url: "/favicon-32x32.png",
+        sizes: "32x32",
+        type: "image/png",
+      },
+      {
+        url: "/favicon-96x96.png",
+        sizes: "96x96",
+        type: "image/png",
+      },
+      {
+        url: "/android-icon-192x192.png",
+        sizes: "192x192",
+        type: "image/png",
+      },
+    ],
+    apple: [
+      {
+        url: "/apple-icon-57x57.png",
+        sizes: "57x57",
+      },
+      {
+        url: "/apple-icon-60x60.png",
+        sizes: "60x60",
+      },
+      {
+        url: "/apple-icon-72x72.png",
+        sizes: "72x72",
+      },
+      {
+        url: "/apple-icon-76x76.png",
+        sizes: "76x76",
+      },
+      {
+        url: "/apple-icon-114x114.png",
+        sizes: "114x114",
+      },
+      {
+        url: "/apple-icon-120x120.png",
+        sizes: "120x120",
+      },
+      {
+        url: "/apple-icon-144x144.png",
+        sizes: "144x144",
+      },
+      {
+        url: "/apple-icon-152x152.png",
+        sizes: "152x152",
+      },
+      {
+        url: "/apple-icon-180x180.png",
+        sizes: "180x180",
+      },
+    ],
+  },
+  other: {
+    "msapplication-TileColor": "#ff6900",
+    "msapplication-TileImage": "/ms-icon-144x144.png",
+  },
+}
+
+// Props
+type Props = {
+  title?: string
+  description?: string
+  ogImage?: string
+  canonical?: boolean
+  noindex?: boolean
+}
+// Page Metadata
+const {
+  title = configData.siteTitle,
+  description = configData.siteDescription,
+  ogImage = configData.ogImage,
+  canonical = configData.canonical,
+  noindex = configData.noindex,
+} = Astro.props
+---
+
+<head>
+  {googleAnalyticsMeasurementID && <GoogleAnalytics />}
+  {googleTagManagerID && <GoogleTagManagerHead />}
+  <GoogleSearchConsole />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <Seo
+    title={title}
+    description={description}
+    ogImage={ogImage}
+    canonical={canonical}
+    noindex={noindex}
+  />
+  <link rel="icon" href={configData.logo.src} type="image/svg+xml" />
+  <link rel="sitemap" href="/sitemap-index.xml" />
+  <meta name="generator" content={Astro.generator} />
+  <meta name="theme-color" content="#ff6900" />
+  {
+    manifestData.icons?.icon?.map((icon) => (
+      <link
+        rel="icon"
+        type={icon.type || "image/png"}
+        sizes={icon.sizes}
+        href={icon.url}
+      />
+    ))
+  }
+
+  {
+    manifestData.icons?.apple?.map((appleIcon) => (
+      <link
+        rel="apple-touch-icon"
+        sizes={appleIcon.sizes}
+        href={appleIcon.url}
+      />
+    ))
+  }
+
+  {
+    manifestData.other &&
+      Object.entries(manifestData.other).map(([name, content]) => (
+        <meta name={name} content={String(content)} />
+      ))
+  }
+  <ClientRouter fallback="swap" />
+</head>

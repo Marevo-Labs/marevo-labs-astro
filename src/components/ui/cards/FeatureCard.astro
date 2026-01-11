@@ -1,0 +1,34 @@
+---
+// Feature Card
+// ------------
+// Description: The Card for presenting a feature
+// Properties:
+// - Title: the title of the card
+// - Subtitle: the subtitle of the card
+// - Image: the main image of the card
+// - Link: The link to the blog post
+// Reference: https://wind-ui.com/components/cards/
+
+// Components
+// - UI
+import BasicCard from "./BasicCard.astro"
+
+// Props
+type Props = {
+  title?: string
+  subtitle?: string
+  image?: any
+  link?: string
+}
+const { title, subtitle, image, link } = Astro.props
+---
+
+<BasicCard
+  title={title}
+  subtitle={subtitle}
+  titleSize="xl"
+  link={link}
+  image={image}
+  type="image-bottom"
+  classes="!bg-zinc-50 !shadow-none dark:!bg-zinc-900 h-full justify-between border border-zinc-100 dark:border-zinc-800"
+/>

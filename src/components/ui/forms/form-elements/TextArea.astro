@@ -1,0 +1,93 @@
+---
+// Text Area
+// ------------
+// Description: The component for the basic form input field
+// Properties:
+// - id: The id of the text field
+// - label: The label of the text field
+// - iconName: The name of the icon to be displayed (optional)
+// - iconPosition: The position of the icon (lead or trail)
+// - helperText: The helper text to be displayed
+// - required: Whether the text field is required
+// - disabled: Whether the text field is disabled
+// - value: The value of the text field
+// - classes: Additional classes to be added to the text field
+
+// Reference: https://wind-ui.com/components/form-elements/textareas/
+
+// Components
+// - UI
+import { Icon } from "astro-icon/components"
+
+// Props
+type Props = {
+  id: string
+  label: string
+  iconName?: string
+  iconPosition?: "lead" | "trail"
+  helperText?: string
+  required?: boolean
+  disabled?: boolean
+  value?: string
+  classes?: string
+}
+const {
+  id,
+  label,
+  iconName,
+  iconPosition,
+  helperText,
+  required,
+  disabled,
+  value,
+  classes,
+} = Astro.props
+---
+
+<div
+  class:list={[
+    "input relative w-full",
+    { ["input--icon-" + `${iconPosition}`]: iconPosition },
+    {
+      "input--icon-lead [&_.input__field]:!pl-12 [&_.input__icon]:left-4":
+        iconPosition === "lead",
+    },
+    {
+      "input--icon-trail [&_.input__field]:!pr-12 [&_.input__icon]:right-4":
+        iconPosition === "trail",
+    },
+    { [`${classes}`]: classes },
+  ]}
+>
+  <textarea
+    id={id}
+    rows="7"
+    name={id}
+    placeholder={label}
+    required={required}
+    disabled={disabled}
+    value={value}
+    class="input__field peer focus:border-primary-500 relative w-full rounded border border-zinc-200 px-4 text-zinc-500 placeholder-transparent -backdrop-hue-rotate-30 transition-all outline-none autofill:bg-white invalid:border-red-500 invalid:text-red-500 focus:outline-none invalid:focus:border-red-500 focus-visible:outline-none disabled:cursor-not-allowed disabled:bg-zinc-50 disabled:text-zinc-400 dark:border-zinc-800 dark:bg-zinc-900 dark:autofill:bg-zinc-800 dark:disabled:bg-zinc-600"
+  ></textarea>
+  <label
+    for={id}
+    class={`input__label peer-focus:text-primary-500 absolute -top-2 left-2 z-[1] cursor-text px-2 text-xs text-zinc-400 transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-autofill:-top-2 peer-invalid:text-red-500 peer-focus:-top-2 peer-focus:cursor-default peer-focus:text-xs peer-invalid:peer-focus:text-red-500 peer-disabled:cursor-not-allowed peer-disabled:text-zinc-400 before:absolute before:top-0 before:left-0 before:z-[-1] before:block before:h-full before:w-full before:bg-white before:transition-all peer-disabled:before:bg-transparent peer-required:after:text-red-500 peer-required:after:content-['\x00a0*'] dark:before:bg-zinc-900 ${iconPosition === "lead" ? "peer-placeholder-shown:left-10 peer-focus:left-2" : ""}`}
+  >
+    {label}
+  </label>
+  {
+    iconName && (
+      <Icon
+        name={iconName}
+        class="input__icon absolute top-3 left-4 h-6 w-6 stroke-zinc-400 peer-disabled:cursor-not-allowed"
+      />
+    )
+  }
+  {
+    helperText && (
+      <small class="input__helper-text absolute flex w-full justify-between px-4 py-1 text-xs text-zinc-400 transition peer-invalid:text-red-500">
+        <span> {helperText} </span>
+      </small>
+    )
+  }
+</div>
