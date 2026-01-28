@@ -1,37 +1,43 @@
 [
 	{
-		"question": "What is the cost of the basic plan?",
-		"reply": "The basic plan is $9.99 per month, which includes access to core features and limited integrations. This plan is perfect for individuals or small teams looking to improve their productivity without a large investment.",
+		"question": "What is difference between the Lump Sum and Monthly plan?",
+		"reply": "The biggest difference is the short-term versus long-term costs. With the lump sum, you pay a one-time fee for the project, while with the monthly plan, you are spreading out the cost over time. Over time you'll likely save money with the lump sum, but paying a smaller monthly fee is more manageable for many businesses. It all comes down to cash flow and short- versus long-term goals.",
 		"category": "pricing",
 		"open": true
 	},
 	{
-		"question": "Are there any discounts for annual subscriptions?",
-		"reply": "Yes, we offer a 20% discount on annual subscriptions for all our plans. By choosing an annual subscription, you can save money and ensure uninterrupted access to all Foxi features for the entire year.",
+		"question": "Can I add on 24/7 Support, Lifetime Updates, or other features to the Lump Sum plan?",
+		"reply": "Yes, we offer add-ons to any of our plans, typically with a 12 month commitment. This helps us plan for the future and ensures we can continue to support you long-term. We can also work out a custom plan for you if you need something specific.",
 		"category": "pricing",
 		"open": false
 	},
 	{
-		"question": "Can I change my subscription plan at any time?",
-		"reply": "Yes, you can upgrade or downgrade your subscription plan at any time from your account settings. This flexibility allows you to adjust your plan based on your changing needs and usage.",
+		"question": "Can I change or cancel my Monthly subscription plan at any time?",
+		"reply": "The Monthly plan is contract-based and typically starts with a minimum 12 month commitment, and after that is month to month. You can cancel anytime after the contract commitment time has passed. If you do decide to cancel, we have options to help you with the transition, whether that is shutting down the site, paying a one-time transfer fee, or other options.",
 		"category": "pricing",
 		"open": false
 	},
 	{
-		"question": "Is there a free trial available?",
-		"reply": "Yes, we offer a 14-day free trial for all new users. During the trial, you can explore all the features of Foxi without any commitment, allowing you to see how it fits into your workflow.",
+		"question": "What happens if I cancel my Monthly subscription plan before the contract commitment time has passed?",
+		"reply": "We prioritize building long-term relationships with our clients, and hope our clients reciprocate. We also understand that sometimes things change out of our control. Typically, you would be responsible for the full remaining contract amount, but we are happy to find a solution that works for both parties.",
 		"category": "pricing",
 		"open": false
 	},
 	{
-		"question": "Do you offer refunds?",
-		"reply": "We offer a 30-day money-back guarantee if you are not satisfied with our service. Simply contact our support team within 30 days of your purchase, and we'll process your refund.",
+		"question": "How do additional pages work?",
+		"reply": "Many simple websites require 5 or less pages, but we find that a lot of websites need more than 5 pages, and we offer a $100/page fee after the first 5 pages. This is a one-time fee, and you can add as many pages as you need. There is no limit to the number of pages you can add, and we can offer discounts for larger projects.",
 		"category": "pricing",
 		"open": false
 	},
 	{
-		"question": "How do I cancel my subscription?",
-		"reply": "You can cancel your subscription from your account settings at any time. After cancellation, you will still have access to your account until the end of the billing cycle.",
+		"question": "What payment methods do you accept?",
+		"reply": "Our invoicing software Wave securely handles the payments, and you can pay with Apple Pay or any major card: Visa, Visa Debit, Mastercard, Mastercard Debit, and American Express. Invoices are sent via email, and you can also set up recurring payments for the Monthly plan.",
+		"category": "pricing",
+		"open": false
+	},
+	{
+		"question": "Can you tell me more about the Custom plan?",
+		"reply": "Some projects are just more complex than others, whether that is due to complex business logic, custom API integrations, building out an e-commerce store, scaffolding a Content Management System (CMS), or other unique requirements. With nearly two decades of experience each, we have the expertise to handle even the most complex projects. We offer a custom plan for these projects, and we can work with you to design a plan that works best for you.",
 		"category": "pricing",
 		"open": false
 	},

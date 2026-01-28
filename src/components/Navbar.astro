@@ -2,7 +2,7 @@
 import { ChevronDownIcon } from "lucide-react"
 import Button from "@/components/ui/button.astro"
 import Switcher from "./ModeSwitcher.astro"
-import Logo from "./Logo"
+import Logo from "./Logo.astro"
 
 const navigationBarData = {
   navItems: [
@@ -40,7 +40,7 @@ function isActivePath(currentPath: string): boolean {
     <nav
       aria-label="main navigation"
       role="navigation"
-      class="flex h-22 items-stretch gap-6 font-medium text-zinc-700 lg:justify-between dark:text-zinc-50"
+      class="flex h-22 items-stretch gap-6 font-medium text-foreground lg:justify-between"
     >
       <!-- Logo -->
       <a
@@ -104,7 +104,7 @@ function isActivePath(currentPath: string): boolean {
                 <a
                   href={item.link}
                   role="menuitem"
-                  class={`relative flex items-center gap-1 py-4 transition-colors duration-300 hover:text-primary focus:text-primary focus:outline-none focus-visible:outline-none lg:px-6 [&.active]:text-primary ${isActivePath(item.link) ? "active" : ""}`}
+                  class={`relative flex items-center gap-1 py-4 transition-colors duration-300 hover:text-primary focus:text-primary focus:outline-none focus-visible:outline-none lg:px-6 [&.active]:text-primary ${isActivePath(item.link) ? "active italic" : ""}`}
                 >
                   {item.name}
                 </a>
@@ -118,7 +118,7 @@ function isActivePath(currentPath: string): boolean {
                   <label
                     for={`submenu-${item.name.toLowerCase().replace(/\s+/g, "-")}`}
                     role="menuitem"
-                    class={`relative flex cursor-pointer items-center gap-1 py-4 transition-colors duration-300 hover:text-primary focus:text-primary focus:outline-none focus-visible:outline-none lg:cursor-default lg:px-6 [&.active]:text-primary ${isActivePath(item.link) ? "active" : ""}`}
+                    class={`relative flex cursor-pointer items-center gap-1 py-4 transition-colors duration-300 hover:text-primary focus:text-primary focus:outline-none focus-visible:outline-none lg:cursor-default lg:px-6 [&.active]:text-primary ${isActivePath(item.link) ? "active italic" : ""}`}
                   >
                     {item.name}
                     <ChevronDownIcon className="h-4 w-4 transition-transform duration-300 peer-checked:rotate-180 lg:group-hover:rotate-180" />
@@ -129,7 +129,7 @@ function isActivePath(currentPath: string): boolean {
                         <a
                           href={subItem.link}
                           role="menuitem"
-                          class={`relative flex items-center gap-1 py-3 transition-colors duration-300 hover:text-primary focus:text-primary focus:outline-none focus-visible:outline-none lg:px-6 lg:py-4 [&.active]:text-primary ${isActivePath(subItem.link) ? "active" : ""}`}
+                          class={`relative flex items-center gap-1 py-3 transition-colors duration-300 hover:text-primary focus:text-primary focus:outline-none focus-visible:outline-none lg:px-6 lg:py-4 [&.active]:text-primary ${isActivePath(subItem.link) ? "active italic" : ""}`}
                         >
                           {subItem.name}
                         </a>

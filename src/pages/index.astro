@@ -6,14 +6,15 @@ import HomeCTA from "@/components/blocks/hero/HomeCTA.astro"
 import HighlightBlocks from "@/components/blocks/highlights/HightlightRows.astro"
 import CTA from "@/components/blocks/CTA/BasicDark.astro"
 import Testimonial from "@/components/blocks/testimonials/BasicDark.astro"
-
+import SocialProof from "@/components/blocks/socialproof/Basic.astro"
 import testimonialBackground from "../assets/testimonial-bg-01.webp"
 ---
 
 <Layout>
   <HomeCTA />
   <FeatureCards />
-  <Testimonial bg={testimonialBackground} bgPosition="right" />
+  <SocialProof />
+  <Testimonial bg={testimonialBackground} bgPosition='right' />
   <HighlightBlocks />
   <CTA />
 </Layout>

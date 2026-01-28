@@ -10,20 +10,28 @@ import FAQ from "../components/blocks/FAQ/Basic.astro"
 import Testimonial from "../components/blocks/testimonials/BasicDark.astro"
 import Feature from "../components/blocks/features/FeatureList.astro"
 import CTA from "../components/blocks/CTA/BasicDark.astro"
+import faqData from "../data/json-files/faqData.json"
+// import FAQSticky from "../components/blocks/FAQ/FaqSticky.astro"
+
+
 
 // Content
 // - SEO
 const SEO = {
   title: "Pricing | Marevo Labs",
   description:
-    "Discover the perfect pricing plan for your business. From startups to enterprises, our scalable solutions offer unparalleled features and 24/7 support.",
+  "Discover the perfect pricing plan for your business. From startups to enterprises, our scalable solutions offer unparalleled features and 24/7 support.",
 }
 // - Page Header
 const header = {
   title:
-    "Choose the plan that works for <strong class='text-primary'>your</strong> needs",
-  text: "All plans come with a 30-day money-back guarantee.",
+  "Choose the plan that works for <strong class='text-primary'>your</strong> business needs",
+  text: "We offer flexible and project-based pricing options that are sure to fit your budget and needs.",
 }
+
+// - FAQ data
+const faqPricing = faqData.filter((faq) => faq.category === "pricing")
+
 // - Testimonial data
 import testimonialBackground from "../assets/testimonial-bg-02.webp"
 const testimonialData = {
@@ -38,6 +46,12 @@ const testimonialData = {
   <Hero title={header.title} text={header.text} />
   <Price />
   <SocialProof />
+  <FAQ classes="bg-zinc-50 dark:bg-zinc-900" />
+  <!-- <FAQSticky
+    title="Understanding Our Pricing Plans"
+    text="We can tailor our pricing plans to fit your needs and budget. Contact us to discuss your project and we'll work out a plan that works best for you."
+    data={faqPricing}
+  /> -->
   <Feature />
   <Testimonial
     bg={testimonialBackground}
@@ -46,6 +60,6 @@ const testimonialData = {
     figcaption={testimonialData.figcaption}
     cite={testimonialData.cite}
   />
-  <FAQ classes="bg-slate-50 dark:bg-zinc-900/40" />
+  
   <CTA />
 </Layout>

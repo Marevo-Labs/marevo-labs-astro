@@ -6,13 +6,13 @@
 
 // Components
 // - UI
-import Logo from "@/components/Logo.tsx"
+import Logo from "@/components/Logo.astro"
 
 // Data
 export const footerNavigationData = {
   footerAbout: {
     aboutText:
-      "Expertly made, responsive, accessible components in React and HTML ready to be used on your website or app. Just copy and paste them on your Tailwind CSS project.",
+      "Building exceptional web and mobile applications for forward-thinking businesses in Metro Detroit and beyond.",
   },
   footerColumns: [
     {
@@ -63,24 +63,24 @@ export const footerNavigationData = {
 const { footerAbout, footerColumns } = footerNavigationData
 ---
 
-<footer class="text-zinc-500 dark:text-zinc-300">
+<footer class='text-zinc-500 dark:text-zinc-300'>
   <!-- Main footer -->
   <div
-    class="border-t border-zinc-100 bg-zinc-50 pb-12 pt-16 text-sm dark:border-zinc-900 dark:bg-zinc-950 [&_li]:mb-2 [&_li]:leading-6"
+    class='border-t border-zinc-100 bg-zinc-50 pb-12 pt-16 text-sm dark:border-zinc-900 dark:bg-zinc-950 [&_li]:mb-2 [&_li]:leading-6'
   >
-    <div class="container mx-auto px-6">
-      <div class="grid grid-cols-4 gap-6 md:grid-cols-8 lg:grid-cols-12">
+    <div class='container mx-auto px-6'>
+      <div class='grid grid-cols-4 gap-6 md:grid-cols-8 lg:grid-cols-12'>
         <div
-          class="col-span-2 first:col-span-4 md:col-span-4 md:first:col-span-6 lg:col-span-2 lg:first:col-span-6 lg:first:max-w-96"
+          class='col-span-2 first:col-span-4 md:col-span-4 md:first:col-span-6 lg:col-span-2 lg:first:col-span-6 lg:first:max-w-96'
         >
           <a
-            aria-label="website logo"
-            aria-current="page"
-            class="mb-6 flex items-center gap-2 whitespace-nowrap font-headings text-xl font-bold leading-6 text-zinc-700 transition-colors duration-300 hover:text-primary-500 focus:outline-none focus:text-primary-600 dark:text-zinc-50"
-            href="/"
+            aria-label='website logo'
+            aria-current='page'
+            class='mb-6 flex items-center gap-2 whitespace-nowrap font-headings text-xl font-bold leading-6 text-foreground transition-colors duration-300 hover:text-primary-500 focus:outline-none focus:text-primary-600'
+            href='/'
           >
             <Logo width={256.16666667} height={28.66666667} />
-            <span class="sr-only">Marevo Labs</span>
+            <span class='sr-only'>Marevo Labs</span>
           </a>
           <p>
             {footerAbout.aboutText}
@@ -88,8 +88,8 @@ const { footerAbout, footerColumns } = footerNavigationData
         </div>
         {
           footerColumns.map((column) => (
-            <div class="col-span-2 md:col-start-8 last:md:col-start-10 lg:col-start-8 last:lg:col-start-10">
-              <h3 class="mb-6 text-base font-medium leading-8 font-gotham uppercase">
+            <div class='col-span-2 md:col-start-8 last:md:col-start-10 lg:col-start-8 last:lg:col-start-10'>
+              <h3 class='mb-6 text-base font-medium leading-8 font-gotham uppercase'>
                 {column.category}
               </h3>
               <ul>
@@ -97,7 +97,7 @@ const { footerAbout, footerColumns } = footerNavigationData
                   <li>
                     <a
                       href={subCategory.subCategoryLink}
-                      class="transition-colors duration-300 hover:text-primary-500 focus:text-primary-600"
+                      class='transition-colors duration-300 hover:text-primary-500 focus:text-primary-600'
                     >
                       {" "}
                       {subCategory.subCategory}{" "}
@@ -113,13 +113,13 @@ const { footerAbout, footerColumns } = footerNavigationData
   </div>
   <!-- Sub Footer -->
   <div
-    class="border-t border-zinc-200 bg-zinc-100 py-4 text-sm text-zinc-600 dark:border-zinc-900 dark:bg-zinc-800/50 dark:text-zinc-400"
+    class='border-t border-zinc-200 bg-zinc-100 py-4 text-sm text-zinc-600 dark:border-zinc-900 dark:bg-zinc-800/50 dark:text-zinc-400'
   >
-    <div class="container mx-auto px-6">
+    <div class='container mx-auto px-6'>
       <div
-        class="grid grid-cols-4 items-center gap-6 md:grid-cols-8 lg:grid-cols-12"
+        class='grid grid-cols-4 items-center gap-6 md:grid-cols-8 lg:grid-cols-12'
       >
-        <div class="col-span-12 text-center">
+        <div class='col-span-12 text-center'>
           &copy; Marevo Labs, LLC {new Date().getFullYear()}. All rights
           reserved.
         </div>

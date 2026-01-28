@@ -10,8 +10,8 @@ import CTA from "../components/blocks/CTA/BasicDark.astro"
 // Data
 import featuresData from "../data/json-files/featuresData.json"
 // - Feature Categories
-const featuresAnalytics = featuresData.filter(
-  (feature) => feature.category === "Analytics"
+const featuresWebDesign = featuresData.filter(
+  (feature) => feature.category === "WebDesign"
 )
 const featuresProductivity = featuresData.filter(
   (feature) => feature.category === "Productivity"
@@ -36,38 +36,38 @@ const SEO = {
 // - Page Header
 const header = {
   title:
-    "Why you and your team will <strong class='text-primary'>love</strong> Marevo Labs.",
-  text: "Streamline your tasks, protect your data, and enjoy working with our tools!",
+    "<strong class='text-primary'>Professional</strong> Web Design & Development Services",
+  text: "At Marevo Labs, we do things a little differently. Instead of using site builders, we write 100% of the code for our sites from top to bottom.",
 }
 ---
 
 <Layout title={SEO.title} description={SEO.description}>
   <Hero title={header.title} text={header.text} />
   <Feature
-    title="Insightful Analytics"
-    text="Delve into your data with precision and uncover actionable insights."
-    data={featuresAnalytics}
+    title="Web Design & Development"
+    text="From simple static sites to complex web applications, we build websites that look great and work even better."
+    data={featuresWebDesign}
   />
   <Feature
-    title="Efficiency Unleashed"
-    text="Streamline tasks and focus on what matters with tools designed to boost your productivity."
+    title="Custom App Development"
+    text="We build custom apps that are tailored to your business needs. Whether you need a simple app to manage your inventory or a complex app to manage your entire business, we've got you covered."
     data={featuresSecurity}
     classes="bg-zinc-50 dark:bg-zinc-900"
   />
   <Feature
-    title="Ultimate Data Protection"
-    text="Keep your data safe with top-notch security measures and real-time threat detection."
+    title="UX/UI Design"
+    text="We design user interfaces that are not only beautiful but also easy to use. We make sure your website or app is not only functional but also looks great."
     data={featuresProductivity}
   />
   <Feature
-    title="Seamless Connectivity"
-    text="Effortlessly connect your favorite apps and automate workflows for a smoother workday."
+    title="Search Engine Optimization (SEO)"
+    text="We optimize your website or app for search engines to help you get more traffic and more customers."
     data={featuresIntegrations}
     classes="bg-zinc-50 dark:bg-zinc-900"
   />
   <Feature
     title="24/7 Expert Help"
-    text="Our friendly support team is always here to assist you with any questions or issues."
+    text="We offer 24/7 expert support to help you with any questions or issues you may have."
     data={featuresSupport}
   />
   <CTA />

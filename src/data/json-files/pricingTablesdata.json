@@ -1,78 +1,140 @@
 [
-	{
-		"header": {
-			"title": "Basic",
-			"subtitle": "Ideal for individual developers.",
-			"currency": "$",
-			"price": "19",
-			"priceLabel": "month, billed anually",
-			"priceMontly": "25",
-			"priceLabelMontly": "month",
-			"buttonName": "Try for free",
-			"buttonLink": "/"
-		},
-		"body": {
-			"listItems": [
-				{ "listItem": "Join forces with fellow architects" },
-				{ "listItem": "Present your projects with flair and captivate your audience." },
-				{ "listItem": "Immerse yourself in the dynamic realm of architecture." }
-			]
-		},
-		"footer": {
-			"buttonName": "See all features",
-			"buttonLink": "/"
-		},
-		"type": "basic"
-	},
-	{
-		"header": {
-			"title": "Team",
-			"subtitle": "Ideal for small teams",
-			"currency": "$",
-			"price": "29",
-			"priceLabel": "month, billed anually",
-			"priceMontly": "35",
-			"priceLabelMontly": "month",
-			"buttonName": "Try for free",
-			"buttonLink": "/"
-		},
-		"body": {
-			"listItems": [
-				{ "listItem": "Join forces with fellow architects" },
-				{ "listItem": "Present your projects with flair and captivate your audience." },
-				{ "listItem": "Immerse yourself in the dynamic realm of architecture." },
-				{ "listItem": "Unlock endless inspiration" }
-			]
-		},
-		"footer": {
-			"buttonName": "See all features",
-			"buttonLink": "/"
-		},
-		"type": "featured"
-	},
-	{
-		"header": {
-			"title": "Enterprise",
-			"subtitle": "Ideal for companies",
-			"currency": "$",
-			"price": "49",
-			"priceLabel": "month, billed anually",
-			"priceMontly": "65",
-			"priceLabelMontly": "month",
-			"buttonName": "Try for free",
-			"buttonLink": "/"
-		},
-		"body": {
-			"listItems": [
-				{ "listItem": "Join forces with fellow architects" },
-				{ "listItem": "Present your projects with flair and captivate your audience." },
-				{ "listItem": "Immerse yourself in the dynamic realm of architecture." }
-			]
-		},
-		"footer": {
-			"buttonName": "See all features",
-			"buttonLink": "/"
-		},
-		"type": "basic"
-	}
+  {
+    "header": {
+      "title": "Lump Sum",
+      "subtitle": "Ideal for one-time projects that don't require ongoing maintenance.",
+      "currency": "$",
+      "price": "3,750",
+      "priceLabel": "One time payment with deposit"
+    },
+    "body": {
+      "listItems": [
+        {
+          "listItem": "Design and Development",
+          "included": true
+        },
+        {
+          "listItem": "$25/mo Hosting",
+          "included": true
+        },
+        {
+          "listItem": "$100/page fee after 5 pages",
+          "included": true
+        },
+        {
+          "listItem": "+$50/mo Unlimited Edits",
+          "included": true
+        },
+        {
+          "listItem": "No minimum contract",
+          "included": true
+        },
+        {
+          "listItem": "24/7 Support",
+          "included": false
+        },
+        {
+          "listItem": "Lifetime Updates",
+          "included": false
+        }
+      ]
+    },
+    "footer": {
+      "buttonName": "Customize your plan",
+      "buttonLink": "/contact?type=lump-sum"
+    },
+    "type": "basic"
+  },
+  {
+    "header": {
+      "title": "Monthly",
+      "subtitle": "Best for small businesses that need help getting their business online.",
+      "currency": "$",
+      "price": "175",
+      "priceLabel": "Billed monthly"
+    },
+    "body": {
+      "listItems": [
+        {
+          "listItem": "Design and Development",
+          "included": true
+        },
+        {
+          "listItem": "Includes Hosting",
+          "included": true
+        },
+        {
+          "listItem": "$100/page fee after 5 pages",
+          "included": true
+        },
+        {
+          "listItem": "Unlimited Edits",
+          "included": true
+        },
+        {
+          "listItem": "12 month minimum contract",
+          "included": true
+        },
+        {
+          "listItem": "24/7 Support",
+          "included": true
+        },
+        {
+          "listItem": "Lifetime Updates",
+          "included": true
+        }
+      ]
+    },
+    "footer": {
+      "buttonName": "Get started",
+      "buttonLink": "/contact?type=monthly"
+    },
+    "type": "featured"
+  },
+  {
+    "header": {
+      "title": "Custom",
+      "subtitle": "For apps that require unique, custom development and integrations.",
+      "currency": "$",
+      "price": "5k",
+      "priceLabel": "Starting project-based pricing"
+    },
+    "body": {
+      "listItems": [
+        {
+          "listItem": " Integrate with anything",
+          "included": true
+        },
+        {
+          "listItem": "E-commerce options",
+          "included": true
+        },
+        {
+          "listItem": "CMS options",
+          "included": true
+        },
+        {
+          "listItem": "Unlimited Edits",
+          "included": true
+        },
+        {
+          "listItem": "No minimum contract",
+          "included": true
+        },
+        {
+          "listItem": "24/7 Support",
+          "included": true
+        },
+        {
+          "listItem": "Lifetime Updates",
+          "included": true
+        }
+      ]
+    },
+    "footer": {
+      "buttonName": "Learn more",
+      "buttonLink": "/contact?type=custom"
+    },
+    "type": "basic"
+  }
 ]

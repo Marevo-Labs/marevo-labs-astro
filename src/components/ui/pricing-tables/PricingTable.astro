@@ -34,13 +34,9 @@ type PricingTableProps = {
     currency: string
     price: string
     priceLabel: string
-    priceMontly?: string
-    priceLabelMontly?: string
-    buttonName: string
-    buttonLink: string
   }
   body?: {
-    listItems: Array<{ listItem: string }>
+    listItems: Array<{ listItem: string, included: boolean }>
   }
   footer?: {
     buttonName: string
@@ -60,76 +56,38 @@ const { type, header, body, footer } = data
 <div
   id={id}
   class:list={[
-    "pricing pricing--annualy mx-auto max-w-sm overflow-hidden rounded border border-zinc-100 bg-white text-zinc-500 shadow-xl shadow-zinc-700/5 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-300 dark:shadow-zinc-950/50 [&_.pricing__header-subtitle]:text-zinc-400",
-    { [`pricing--${type}`]: type },
-    { [`${classes}`]: classes },
+    "mx-auto max-w-sm overflow-hidden rounded border border-zinc-100 shadow-xl shadow-zinc-700/5 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-300 dark:shadow-zinc-950/50",
     {
-      "!text-primary-foreground !border-primary shadow-primary-500/30 [&_.pricing__header-subtitle]:text-primary/20 shadow-2xl":
-        type === "featured",
+      "!border-primary": type === "featured",
     },
   ]}
 >
   <div class="pricing__container flex flex-col">
     <Header type={type}>
-      <h3
-        class:list={[
-          "pricing__header-title mb-0 text-xl font-bold text-zinc-700 dark:text-zinc-50",
-          {
-            [`pricing__header-title--featured text-primary-50`]:
-              type === "featured",
-          },
-        ]}
-      >
-        <span class="font-gotham uppercase">{header.title}</span>
-
-        <span class="pricing__header-subtitle block text-sm font-normal"
-          >{header.subtitle}</span
-        >
+      <h3 class="font-gotham uppercase text-xl text-foreground">
+        {header.title}
       </h3>
-      <div class="pricing__header-info h-16 overflow-hidden">
+      <p class="text-muted-foreground block text-sm"
+          >{header.subtitle}</p
+        >
+      <div class="pricing__header-info overflow-hidden">
         <h4
           class:list={[
-            "pricing__header-info-annualy text-5xl font-bold text-zinc-700 lg:text-6xl dark:text-zinc-50 mb-0 h-16 transition-all duration-300 [.pricing--monthly_&]:-translate-y-16 [.pricing--monthly_&]:opacity-0",
-            { [`text-primary-50`]: type === "featured" },
+            "flex justify-center items-end text-5xl font-bold text-foreground lg:text-6xl mb-0 h-16 transition-all duration-300 mb-4",
           ]}
         >
-          <span class="pricing__header-currency text-3xl"
-            >{header.currency}</span
-          >
-          <span class="pricing__header-price tracking-tighter"
-            >{header.price}</span
-          >
-          <span class="pricing__header-perTime text-sm"
-            >/{header.priceLabel}</span
-          >
+          <span>
+            <span class="tracking-tighter"
+              ><span class="text-3xl mr-1">{header.currency}</span>{
+                header.price
+              }</span
+            >
+          </span>
         </h4>
-        <h4
-          class:list={[
-            "pricing__header-info-monthly text-5xl font-bold text-zinc-700 lg:text-6xl dark:text-zinc-50 mb-0 h-16 opacity-0 transition-all duration-300 [.pricing--monthly_&]:-translate-y-16 [.pricing--monthly_&]:opacity-100",
-            { [`text-primary-50`]: type === "featured" },
-          ]}
-        >
-          <span class="pricing__header-currency text-3xl"
-            >{header.currency}</span
-          >
-          <span class="pricing__header-price tracking-tighter"
-            >{header.priceMontly}</span
-          >
-          <span class="pricing__header-perTime text-sm"
-            >/{header.priceLabelMontly}</span
-          >
-        </h4>
+        <div class="text-sm text-center text-muted-foreground">
+          {header.priceLabel}
+        </div>
       </div>
-
-      <Button
-        size="lg"
-        style={type === "featured" ? "secondary" : "primary"}
-        elevated
-        type="link"
-        link={header.buttonLink}
-      >
-        {header.buttonName}
-      </Button>
     </Header>
 
     {
@@ -138,12 +96,7 @@ const { type, header, body, footer } = data
           <List
             type={listType}
             listItems={body.listItems}
-            classes={
-              type === "featured"
-                ? "[&_li]:!text-primary-50 space-y-4"
-                : "space-y-4"
-            }
-            listColor={type === "featured" ? "white" : "primary"}
+            classes="space-y-4"
           />
         </Body>
       )
@@ -153,10 +106,9 @@ const { type, header, body, footer } = data
         <Footer type={type}>
           <Button
             size="lg"
-            style="primary"
+            variant="default"
             type="link"
             link={footer.buttonLink}
-            variation="link"
             classes={
               "!font-medium " + (type === "featured" ? "!text-white" : "")
             }

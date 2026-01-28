@@ -16,15 +16,7 @@ const { classes, type } = Astro.props
 
 <footer
   class:list={[
-    "pricing__footer border-t p-6 text-center text-sm",
-    {
-      "pricing__footer--featured border-primary-700 bg-primary-700/50":
-        type === "featured",
-    },
-    {
-      [`pricing__footer--${type} border-zinc-100 bg-zinc-50/50 dark:border-zinc-800 dark:bg-zinc-800/50`]:
-        type === "basic",
-    },
+    "pricing__footer border-t p-6 text-center text-sm border-zinc-100 bg-zinc-50/50 dark:border-zinc-800 dark:bg-zinc-800/50",
     { [`${classes}`]: classes },
   ]}
 >

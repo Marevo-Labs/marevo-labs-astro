@@ -8,41 +8,39 @@
 import Section from "../../ui/Section.astro"
 import Row from "../../ui/Row.astro"
 import Col from "../../ui/Col.astro"
-// - UI
-import { Image } from "astro:assets"
 
-// Content
-import airtable from "../../../assets/logos/airtable-logo.svg"
-import asana from "../../../assets/logos/asana-logo.svg"
-import basecamp from "../../../assets/logos/basecamp-logo.svg"
-import evernote from "../../../assets/logos/evernote-logo.svg"
-import notion from "../../../assets/logos/notion-logo.svg"
-import slack from "../../../assets/logos/slack-logo.svg"
+// Content - Import SVGs as raw text to inline them (using Vite's ?raw query)
+import unitedSvg from "../../../assets/logos/uhg.svg?raw"
+import caesarsSvg from "../../../assets/logos/caesars.svg?raw"
+import packupSvg from "../../../assets/logos/packup.svg?raw"
+import simplyAgreeSvg from "../../../assets/logos/simplyagree.svg?raw"
+import snackpassSvg from "../../../assets/logos/snackpass.svg?raw"
+import wayupSvg from "../../../assets/logos/wayup.svg?raw"
 
-const images = [
+const logos = [
   {
-    image: airtable,
-    alt: "Airtable logo",
+    svg: unitedSvg,
+    alt: "United Healthgroup logo",
   },
   {
-    image: asana,
-    alt: "Asana logo",
+    svg: caesarsSvg,
+    alt: "Caesars logo",
   },
   {
-    image: basecamp,
-    alt: "Basecamp logo",
+    svg: packupSvg,
+    alt: "Packup logo",
   },
   {
-    image: evernote,
-    alt: "Evernote logo",
+    svg: simplyAgreeSvg,
+    alt: "SimplyAgree logo",
   },
   {
-    image: notion,
-    alt: "Notion logo",
+    svg: snackpassSvg,
+    alt: "Snackpass logo",
   },
   {
-    image: slack,
-    alt: "Slack logo",
+    svg: wayupSvg,
+    alt: "WayUp logo",
   },
 ]
 
@@ -53,19 +51,23 @@ type Props = {
 const { classes } = Astro.props
 ---
 
-<Section padding="bottom" classes={classes}>
+<Section padding='bottom' classes={classes}>
   <Row>
-    <Col span="12" align="center">
-      <h2 class="!mb-6 text-base font-normal text-muted-foreground">
-        Trusted by <strong class="text-primary">50,000+</strong> businesses
-      </h2></Col
-    >
+    <Col span='12' align='center'>
+      <h2 class='!mb-6 text-base font-normal text-muted-foreground'>
+        Bringing expertise from our history working with Fortune 500 companies<br
+        />
+        and startups alike, now with a focus on the <strong class='text-primary'
+          >local community.
+        </strong>
+      </h2>
+    </Col>
   </Row>
-  <Row flex classes="!flex-row">
+  <Row flex classes='!flex-row'>
     {
-      images.map((item) => (
+      logos.map((item) => (
         <Col>
-          <Image src={item.image} alt={item.alt} />
+          <div set:html={item.svg} class='text-foreground p-4' />
         </Col>
       ))
     }
