@@ -33,7 +33,6 @@ const formName = name || id || undefined;
   id={id}
   name={formName}
   data-netlify={netlify ? true : undefined}
-  netlify={netlify ? true : undefined}
 >
   {netlify && formName && (
     <input type="hidden" name="form-name" value={formName} />

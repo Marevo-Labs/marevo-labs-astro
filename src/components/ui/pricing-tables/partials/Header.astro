@@ -12,12 +12,12 @@ type Props = {
   classes?: string
 }
 
-const { classes, type } = Astro.props
+const { classes } = Astro.props
 ---
 
 <header
   class:list={[
-    "flex flex-col space-y-2 p-6 transition-all duration-300",    
+    "flex flex-col space-y-2 p-6 transition-all duration-300",
     { [`${classes}`]: classes },
   ]}
 >

@@ -36,7 +36,7 @@ type PricingTableProps = {
     priceLabel: string
   }
   body?: {
-    listItems: Array<{ listItem: string, included: boolean }>
+    listItems: Array<{ listItem: string; included: boolean }>
   }
   footer?: {
     buttonName: string
@@ -49,7 +49,7 @@ type Props = {
   listType?: "basic" | "checklist"
   classes?: string
 }
-const { data, id, listType, classes } = Astro.props
+const { data, id, listType } = Astro.props
 const { type, header, body, footer } = data
 ---
 
@@ -62,29 +62,27 @@ const { type, header, body, footer } = data
     },
   ]}
 >
-  <div class="pricing__container flex flex-col">
+  <div class='pricing__container flex flex-col'>
     <Header type={type}>
-      <h3 class="font-gotham uppercase text-xl text-foreground">
+      <h3 class='font-gotham uppercase text-xl text-foreground'>
         {header.title}
       </h3>
-      <p class="text-muted-foreground block text-sm"
-          >{header.subtitle}</p
-        >
-      <div class="pricing__header-info overflow-hidden">
+      <p class='text-muted-foreground block text-sm'>{header.subtitle}</p>
+      <div class='pricing__header-info overflow-hidden'>
         <h4
           class:list={[
             "flex justify-center items-end text-5xl font-bold text-foreground lg:text-6xl mb-0 h-16 transition-all duration-300 mb-4",
           ]}
         >
           <span>
-            <span class="tracking-tighter"
-              ><span class="text-3xl mr-1">{header.currency}</span>{
+            <span class='tracking-tighter'
+              ><span class='text-3xl mr-1'>{header.currency}</span>{
                 header.price
               }</span
             >
           </span>
         </h4>
-        <div class="text-sm text-center text-muted-foreground">
+        <div class='text-sm text-center text-muted-foreground'>
           {header.priceLabel}
         </div>
       </div>
@@ -96,7 +94,7 @@ const { type, header, body, footer } = data
           <List
             type={listType}
             listItems={body.listItems}
-            classes="space-y-4"
+            classes='space-y-4'
           />
         </Body>
       )
@@ -105,9 +103,9 @@ const { type, header, body, footer } = data
       footer && (
         <Footer type={type}>
           <Button
-            size="lg"
-            variant="default"
-            type="link"
+            size='lg'
+            variant='default'
+            type='link'
             link={footer.buttonLink}
             classes={
               "!font-medium " + (type === "featured" ? "!text-white" : "")
