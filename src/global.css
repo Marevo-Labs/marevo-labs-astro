@@ -1,7 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
-@import "@fontsource-variable/outfit";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -40,11 +39,11 @@
   --sidebar-ring: oklch(0.705 0.015 286.067);
 
   /* https://coolors.co/013a3a-268775-6eb981-933535-d68c04 */
-  --color-dark-teal: hsla(180, 97%, 12%, 1);
+  --color-dark-teal: hsla(180, 97%, 12%, 1); /* #013c3c */
   --color-jungle-teal: hsla(169, 56%, 34%, 1);
   --color-light-emerald: hsla(135, 35%, 58%, 1);
-  --color-brown-red: hsla(0, 47%, 39%, 1);
-  --color-harvest-gold: hsla(39, 96%, 43%, 1);
+  --color-brown-red: hsla(0, 47%, 39%, 1); /* #923535 */
+  --color-harvest-gold: hsla(39, 96%, 43%, 1); /* #d78d04 */
 
   /* Fonts */
   --font-decimal: "Decimal-Black-Pro", sans-serif;

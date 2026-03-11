@@ -25,7 +25,7 @@ const { classes } = Astro.props
 
 <Card classes={classes}>
   <CardBody>
-    <Form>
+    <Form name="contact" action="/thank-you/" netlify>
       <h2 class='text-2xl font-gotham uppercase tracking-wide'>
         Send us a message
       </h2>
@@ -39,7 +39,6 @@ const { classes } = Astro.props
           id='email'
           label='Email'
           required
-          value='name@youremail.com'
         />
       </FormField>
       <FormField>

@@ -2,13 +2,13 @@
   {
     "title": "Strategic Discovery & Planning",
     "icon": "chart-pie",
-    "description": "We start every engagement with a deep dive into your business, goals, and competitive landscape. This collaborative discovery process ensures our work is aligned with your vision and positions us to deliver results that move the needle.",
+    "description": "We start every project with a deep dive into your business, goals, and competitive landscape. This collaborative discovery process ensures our work is aligned with your vision and positions us to deliver results that move the needle.",
     "category": "WebDesign"
   },
   {
     "title": "Community & Relationship Focused",
     "icon": "squares-plus",
-    "description": "We're not just vendors—we're partners invested in your success. We prioritize clear communication, regular check-ins, and building genuine relationships with every client we work with.",
+    "description": "We're not just vendors, we're local partners invested in your success. We prioritize clear communication, regular check-ins, and building genuine relationships with every client we work with.",
     "category": "WebDesign"
   },
   {
@@ -24,9 +24,15 @@
     "category": "Productivity"
   },
   {
-    "title": "Responsive & Accessible Design",
+    "title": "Live Chat Support",
+    "icon": "chat-bubble-left-ellipsis",
+    "description": "Connect with our support team via live chat for immediate assistance. Get answers to your questions and resolve issues in real time.",
+    "category": "Support"
+  },
+  {
+    "title": "A Phone Call Away",
     "icon": "device-phone-mobile",
-    "description": "All our projects are built with mobile-first, accessible design principles. We ensure your site works beautifully across all devices and is usable for everyone, including people with disabilities.",
+    "description": "We are always a phone call away. If you have any questions or issues, you can always give us a call and we will be happy to help you.",
     "category": "Support"
   },
   {
@@ -36,9 +42,9 @@
     "category": "Support"
   },
   {
-    "title": "Giving Back & Social Impact",
+    "title": "Giving Back & Local Impact",
     "icon": "shield-check",
-    "description": "We believe in using our skills for good. A portion of our profits supports community initiatives and nonprofits, so when you work with us, you're supporting businesses and causes that matter.",
+    "description": "We believe in using our skills for good. A portion of our profits supports community initiatives and non-profits, so when you work with us, you're supporting local businesses and causes that matter.",
     "category": "Security"
   },
   {
@@ -50,13 +56,13 @@
   {
     "title": "Real-Time Notifications",
     "icon": "bell-alert",
-    "description": "Stay updated with real-time notifications for important events and updates. Never miss out on critical information with instant alerts.",
+    "description": "If you app needs notifications, we can get you set up with native push, email, or SMS notifications to keep your users informed.",
     "category": "Security"
   },
   {
     "title": "Advanced Reporting",
     "icon": "clipboard-document-list",
-    "description": "Generate detailed reports with advanced analytics features. Customize reports to track key performance indicators and gain deeper insights.",
+    "description": "We can get you set up with detailed reports and advanced analytics features to track the metrics that matter most to your business.",
     "category": "WebDesign"
   },
   {
@@ -66,45 +72,33 @@
     "category": "Productivity"
   },
   {
-    "title": "In-App Messaging",
+    "title": "On-page SEO",
     "icon": "chat-bubble-left-right",
-    "description": "Communicate directly within the app using in-app messaging. Keep conversations organized and accessible without switching between tools.",
+    "description": "We will optimize your website or app for search engines to help you get more traffic and more customers.",
     "category": "Integrations"
   },
   {
-    "title": "Multi-Device Sync",
-    "icon": "computer-desktop",
-    "description": "Ensure seamless access to your data across all devices. Sync your information in real-time, so you can work from anywhere with consistency.",
-    "category": "Support"
-  },
-  {
-    "title": "Customizable Alerts",
-    "icon": "bell",
-    "description": "Set up customizable alerts to notify you of important events and changes. Tailor notifications to your needs for better management and response.",
-    "category": "Support"
-  },
-  {
-    "title": "API Integrations",
+    "title": "Constant Iteration",
     "icon": "arrow-path-rounded-square",
-    "description": "Integrate with other systems and services using our flexible API. Expand functionality and connect with external tools effortlessly.",
+    "description": "We will continuously iterate on your website or app to improve search ranking, based on the data and feedback we receive.",
     "category": "Integrations"
   },
   {
     "title": "User Role Management",
     "icon": "user",
-    "description": "Manage user roles and permissions with ease. Control access levels and ensure the right people have the right permissions for your project.",
+    "description": "Create and manage user roles and permissions with ease. Control access levels and ensure the right people have the right permissions for your project.",
     "category": "Security"
   },
   {
-    "title": "Custom Themes",
+    "title": "100% Custom Design",
     "icon": "paint-brush",
-    "description": "Customize the look and feel of your workspace with custom themes. Choose from various design options to match your brand's style.",
+    "description": "Customize the look and feel of your website or app to match your brand's style. No cookie-cutter designs, templates, or pre-made themes here. We design everything from scratch.",
     "category": "WebDesign"
   },
   {
-    "title": "Data Backup",
+    "title": "Secure Databases",
     "icon": "circle-stack",
-    "description": "Protect your data with regular backups. Ensure that your information is safe and recoverable in case of unexpected issues or data loss.",
+    "description": "Each project is built in isolation from other projects, and we use the latest security practices to ensure your data is safe and secure.",
     "category": "Security"
   },
   {
@@ -114,117 +108,69 @@
     "category": "WebDesign"
   },
   {
-    "title": "Interactive Tutorials",
-    "icon": "document-chart-bar",
-    "description": "Access interactive tutorials to get the most out of our features. Learn new skills and improve your proficiency with guided, hands-on experiences.",
-    "category": "Support"
-  },
-  {
-    "title": "Custom Widgets",
+    "title": "Custom Integrations",
     "icon": "squares-plus",
-    "description": "Enhance your dashboard with custom widgets. Add and configure widgets to display the most relevant information for your needs.",
+    "description": "We can integrate a number of third-party services into your website or app to enhance the functionality and user experience.",
     "category": "WebDesign"
   },
   {
-    "title": "Data Visualization",
-    "icon": "eye",
-    "description": "Visualize your data with advanced charting and graphing tools. Create insightful visual representations to better understand your metrics.",
-    "category": "WebDesign"
-  },
-  {
-    "title": "Integration Marketplace",
+    "title": "Content Strategy",
     "icon": "shopping-cart",
-    "description": "Explore our marketplace for additional integrations and plugins. Extend the functionality of your platform with third-party solutions.",
+    "description": "We will help you create a content strategy for your website or app. This includes ideating content for your website or app, and optimizing it for search engines.",
     "category": "Integrations"
   },
   {
-    "title": "Onboarding Assistance",
-    "icon": "user",
-    "description": "Get personalized onboarding assistance to help you set up and start using our platform effectively. Benefit from expert guidance to ensure a smooth start.",
-    "category": "Support"
-  },
-  {
-    "title": "Knowledge Base",
-    "icon": "document-text",
-    "description": "Access a comprehensive knowledge base with articles, guides, and FAQs. Find answers to common questions and learn how to make the most of our features.",
-    "category": "Support"
-  },
-  {
-    "title": "Live Chat Support",
-    "icon": "chat-bubble-left-ellipsis",
-    "description": "Connect with our support team via live chat for immediate assistance. Get answers to your questions and resolve issues in real time.",
-    "category": "Support"
-  },
-  {
-    "title": "Customizable Workspaces",
+    "title": "Information Architecture",
     "icon": "cursor-arrow-ripple",
-    "description": "Personalize your workspace layout to fit your needs. Adjust and configure your workspace for maximum efficiency and comfort.",
+    "description": "We create a clear and intuitive information architecture for your website or app. This helps users find what they need quickly and easily.",
     "category": "Productivity"
   },
   {
     "title": "Task Automation",
     "icon": "rectangle-stack",
-    "description": "Automate routine tasks to improve efficiency and reduce manual work. Set up automated processes to streamline your workflow.",
+    "description": "Automate routine tasks to improve efficiency and reduce manual work. Set up automated processes to streamline your workflows and save you time.",
     "category": "Productivity"
   },
   {
     "title": "Accessibility Features",
     "icon": "eye-slash",
-    "description": "Explore features designed to enhance accessibility. Ensure your tools and workspace are usable for all team members, including those with disabilities.",
+    "description": "We ensure the websites and apps we build are usable for everyone, including those with disabilities.",
     "category": "Security"
   },
   {
-    "title": "Enhanced Mobile Access",
+    "title": "Cross-Platform Compatibility",
     "icon": "mobile",
-    "description": "Benefit from enhanced mobile access features. Use our app to stay connected and productive with improved functionality on mobile devices.",
+    "description": "We ensure the websites and apps we build are compatible with all major platforms and devices, including desktop, mobile, and tablet.",
     "category": "Security"
   },
   {
     "title": "Advanced Bug Tracking",
     "icon": "bug-ant",
-    "description": "Track tasks and projects with advanced tracking features. Monitor progress, set milestones, and manage your projects more effectively.",
+    "description": "We will set up a bug tracking system to help you track and fix issues with your website or app.",
     "category": "Productivity"
   },
   {
-    "title": "Comprehensive Balancer",
-    "icon": "scale",
-    "description": "Access comprehensive support resources to assist users at all levels. From troubleshooting to advanced tips, get the help you need.",
-    "category": "Support"
-  },
-  {
-    "title": "Voice Recordings",
-    "icon": "microphone",
-    "description": "Receive real-time updates on accessibility features and improvements. Stay informed about changes that impact your mobile and web access.",
-    "category": "Support"
-  },
-  {
-    "title": "User Identity Verification",
+    "title": "Branding & Identity",
     "icon": "identification",
-    "description": "Analyze productivity metrics to optimize performance. Gain insights into team and individual productivity to drive improvements.",
+    "description": "We can help you create a brand identity for your website or app. This includes a logo, color scheme, and typography, as well as a consistent visual language for your brand.",
     "category": "Productivity"
   },
   {
     "title": "Payment Integrations",
     "icon": "credit-card",
-    "description": "Communicate directly within the app using in-app messaging. Keep conversations organized and accessible without switching between tools.",
+    "description": "Accept payments directly on your website or app. We can integrate with a variety of payment gateways to offer diverse payment options to your customers, without ever needing to handle credit card information yourself.",
     "category": "Integrations"
   },
   {
-    "title": "Transparent API ",
+    "title": "Advertising & Marketing",
     "icon": "cube-transparent",
-    "description": "Seamlessly integrate with third-party APIs to extend the functionality of your app. Enjoy smooth data exchange and enhanced performance.",
+    "description": "We can help you with advertising and marketing for your website or app. This includes setting up Google Ads, Facebook Ads, and other advertising platforms to help you get more traffic and more customers.",
     "category": "Integrations"
   },
   {
-    "title": "Clever CRM Integration",
+    "title": "Content Management System (CMS)",
     "icon": "light-bulb",
-    "description": "Connect your app with popular CRM systems to streamline customer management. Synchronize data and improve customer relationship processes.",
-    "category": "Integrations"
-  },
-  {
-    "title": "API key Integration",
-    "icon": "key",
-    "description": "Integrate multiple payment gateways to offer diverse payment options. Ensure secure transactions and smooth payment processing for users.",
+    "description": "We can set up a content management system for your website so that you can easily add, edit, and delete content without needing to know how to code.",
     "category": "Integrations"
   }
 ]

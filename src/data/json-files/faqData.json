@@ -42,69 +42,39 @@
 		"open": false
 	},
 	{
-		"question": "Can I use Foxi with Google Calendar?",
-		"reply": "Yes, Foxi integrates seamlessly with Google Calendar for easy scheduling and task management. This integration helps you keep track of your events and tasks in one place.",
+		"question": "Do I have to be techinically savvy to work with you?",
+		"reply": "Not at all! We are here to help you every step of the way, and will translate technical jargon into plain English that anyone can understand. We will guide you through the process of building your website, from the initial design to the final launch. We will also help you with the technical aspects of your website, such as setting up your domain name, hosting your website, and managing your website content.",
 		"category": "integrations",
 		"open": true
 	},
 	{
-		"question": "Does Foxi work with Slack?",
-		"reply": "Yes, you can integrate Foxi with Slack to receive notifications and updates directly in your channels. This allows you to stay informed about your projects without leaving Slack.",
+		"question": "Do you only do phone/video calls, or can we meet in person?",
+		"reply": "We are happy to meet in person, or we can do phone/video calls. We are based in Southeastern Michigan, and we are happy to work with you wherever you are in the world. We are also happy to work with you remotely, and we can provide you with a secure and private communication channel to keep your project confidential.",
 		"category": "integrations",
 		"open": false
 	},
 	{
-		"question": "How do I connect Foxi with Trello?",
-		"reply": "To connect Foxi with Trello, go to the integrations page in your settings and follow the instructions to link your accounts. This integration helps you manage your Trello boards and Foxi projects together.",
+		"question": "Do I need my own domain name and hosting to work with you?",
+		"reply": "No, we can help you with both, as well as any other technical aspects of your website or app. We can be hands off and just hand over code, or we can offer white-glove service and handle everything for you.",
 		"category": "integrations",
 		"open": false
 	},
 	{
-		"question": "Is there an API for custom integrations?",
-		"reply": "Yes, we provide an API that allows you to create custom integrations with Foxi. Our API documentation provides detailed instructions and examples to help you get started.",
+		"question": "Do you offer SEO services?",
+		"reply": "Of course! We offer a variety ofSEO services to help you get more traffic to your website. We will help you optimize your website for search engines, and we will also help you with your content strategy to help you get more traffic to your website.",
 		"category": "integrations",
 		"open": false
 	},
 	{
-		"question": "Can I sync Foxi with my email?",
-		"reply": "Currently, we do not support email integration, but this feature is on our roadmap for future releases. Stay tuned for updates as we continue to enhance Foxi's capabilities.",
+		"question": "Can you do my social media marketing for me?",
+		"reply": "Currently, we do not offer social media marketing services, but we can help you with your content strategy to help you get more traffic to your website. We can also help connect you with partners who offer social media marketing services.",
 		"category": "integrations",
 		"open": false
 	},
 	{
-		"question": "Does Foxi support Zapier?",
-		"reply": "Yes, Foxi integrates with Zapier, allowing you to connect with over 2,000 apps and automate your workflows. This integration helps you streamline your processes and improve efficiency.",
+		"question": "I have an idea for a website or app, but I don't know how to get started. Can you help me?",
+		"reply": "Yes, we can help you with market research and product viability analysis. If you have a rough idea of what you want, we can help you refine it and make it more viable, and if it makes sense, we can help you get started.",
 		"category": "integrations",
-		"open": false
-	},
-	{
-		"question": "What are the main features of Foxi?",
-		"reply": "Foxi includes in-app messaging, project management, time tracking, customizable dashboards, and more. These features are designed to help you stay organized, communicate effectively, and manage your time efficiently.",
-		"category": "features",
-		"open": true
-	},
-	{
-		"question": "How do I use the in-app messaging feature?",
-		"reply": "In-app messaging allows you to communicate with your team directly within Foxi. Simply navigate to the messaging tab to start a conversation. You can send messages, share files, and create group chats.",
-		"category": "features",
-		"open": false
-	},
-	{
-		"question": "Can I customize my dashboard?",
-		"reply": "Yes, you can customize your dashboard by adding, removing, and rearranging widgets to fit your workflow. This customization helps you keep important information at your fingertips.",
-		"category": "features",
-		"open": false
-	},
-	{
-		"question": "How does the time tracking feature work?",
-		"reply": "Time tracking allows you to log the time spent on tasks and projects. Start the timer when you begin a task and stop it when you're done. You can also manually log time if needed.",
-		"category": "features",
-		"open": false
-	},
-	{
-		"question": "Is there a mobile app for Foxi?",
-		"reply": "Yes, Foxi is available on both iOS and Android, allowing you to manage your tasks and projects on the go. Download the app from the App Store or Google Play to stay productive anywhere.",
-		"category": "features",
 		"open": false
 	}
 ]

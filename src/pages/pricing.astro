@@ -10,35 +10,28 @@ import FAQ from "../components/blocks/FAQ/Basic.astro"
 import Testimonial from "../components/blocks/testimonials/BasicDark.astro"
 import Feature from "../components/blocks/features/FeatureList.astro"
 import CTA from "../components/blocks/CTA/BasicDark.astro"
-import faqData from "../data/json-files/faqData.json"
-// import FAQSticky from "../components/blocks/FAQ/FaqSticky.astro"
-
-
 
 // Content
 // - SEO
 const SEO = {
   title: "Pricing | Marevo Labs",
   description:
-  "Discover the perfect pricing plan for your business. From startups to enterprises, our scalable solutions offer unparalleled features and 24/7 support.",
+    "Discover the perfect pricing plan for your business. From startups to enterprises, our scalable solutions offer unparalleled features and 24/7 support.",
 }
 // - Page Header
 const header = {
   title:
-  "Choose the plan that works for <strong class='text-primary'>your</strong> business needs",
+    "Choose the plan that works for <strong class='text-primary'>your</strong> business needs",
   text: "We offer flexible and project-based pricing options that are sure to fit your budget and needs.",
 }
 
-// - FAQ data
-const faqPricing = faqData.filter((faq) => faq.category === "pricing")
-
 // - Testimonial data
-import testimonialBackground from "../assets/testimonial-bg-02.webp"
+import testimonialBackground from "../assets/blurry_background-3.jpg"
 const testimonialData = {
   blockquote:
-    "Foxi isn't just an app—it's like having a mischievous yet brilliant sidekick for your business. It streamlines tasks and also cracks jokes to keep spirits high",
-  figcaption: "Max Widgetson",
-  cite: " CEO, Widgetify Ltd",
+    "Marevo Labs helped me get my business online and I couldn't be happier with the results. I am not technical at all, and they made it so easy for me to get my website up and running. I would definitely recommend them to anyone looking for a website.",
+  figcaption: "Andrea Dadourian",
+  cite: " Owner, Graf's Pastry",
 }
 ---
 
@@ -46,20 +39,16 @@ const testimonialData = {
   <Hero title={header.title} text={header.text} />
   <Price />
   <SocialProof />
-  <FAQ classes="bg-zinc-50 dark:bg-zinc-900" />
-  <!-- <FAQSticky
-    title="Understanding Our Pricing Plans"
-    text="We can tailor our pricing plans to fit your needs and budget. Contact us to discuss your project and we'll work out a plan that works best for you."
-    data={faqPricing}
-  /> -->
+  <FAQ classes='bg-zinc-50 dark:bg-zinc-900' />
+
   <Feature />
   <Testimonial
     bg={testimonialBackground}
-    bgPosition="left"
+    bgPosition='left'
     blockquote={testimonialData.blockquote}
     figcaption={testimonialData.figcaption}
     cite={testimonialData.cite}
   />
-  
+
   <CTA />
 </Layout>

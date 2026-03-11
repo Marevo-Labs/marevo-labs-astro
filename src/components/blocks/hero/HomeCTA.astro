@@ -11,7 +11,7 @@ import Col from "../../ui/Col.astro"
 import { Image } from "astro:assets"
 // - UI
 import Button from "../../ui/button.astro"
-import heroImage from "../../../assets/hero-01.png"
+import heroImage from "../../../assets/devices.png"
 const date = new Date()
 const nextMonth = new Date(date.getFullYear(), date.getMonth() + 1)
 const monthAfterNext = new Date(date.getFullYear(), date.getMonth() + 2)
@@ -54,7 +54,7 @@ const monthRange = `${nextMonth.toLocaleString("default", { month: "long" })}-${
       <Image
         src={heroImage}
         alt='TODO: Add alt text'
-        class='translate-y-8 shadow-2xl shadow-zinc-200 dark:shadow-zinc-950'
+        class='translate-y-8'
         format='webp'
       /></Col
     >

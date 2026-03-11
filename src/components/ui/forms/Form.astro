@@ -7,20 +7,36 @@
 // - classes: Additional classes to be added to the form
 // - id: To set the specific ID of the form
 // - name: sets the form's name
+// - action: Form action URL (e.g. for Netlify redirect after submit)
+// - netlify: Enable Netlify Forms (adds data-netlify and hidden form-name field)
 
 type Props = {
   method?: 'post' | 'get' | 'dialog'
   classes?: string
   id?: string
   name?: string
+  action?: string
+  netlify?: boolean
 }
 
-const { method = 'post', classes, id, name } = Astro.props
+const { method = 'post', classes, id, name, action, netlify = false } = Astro.props
 
 // Use id as name if name is not set but id is set
 const formName = name || id || undefined;
 ---
 
-<form method={method} novalidate class:list={[{ [`${classes}`]: classes }]} id={id} name={formName}>
-	<slot />
+<form
+  method={method}
+  action={action}
+  novalidate
+  class:list={[{ [`${classes}`]: classes }]}
+  id={id}
+  name={formName}
+  data-netlify={netlify ? true : undefined}
+  netlify={netlify ? true : undefined}
+>
+  {netlify && formName && (
+    <input type="hidden" name="form-name" value={formName} />
+  )}
+  <slot />
 </form>
