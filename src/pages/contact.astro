@@ -23,6 +23,24 @@ const header = {
 ---
 
 <Layout title={SEO.title} description={SEO.description}>
+  {/* Hidden form for Netlify build-time detection — same name + fields as the real contact form */}
+  <form
+    name="contact"
+    method="POST"
+    action="/thank-you/"
+    data-netlify="true"
+    data-netlify-honeypot="bot-field"
+    hidden
+  >
+    <input type="hidden" name="form-name" value="contact" />
+    <input type="text" name="bot-field" tabindex="-1" autocomplete="off" />
+    <input type="text" name="firstName" />
+    <input type="text" name="lastName" />
+    <input type="email" name="email" />
+    <input type="tel" name="phone" />
+    <textarea name="message" />
+  </form>
+
   <FormHero
     title={header.title}
     text={header.text}
