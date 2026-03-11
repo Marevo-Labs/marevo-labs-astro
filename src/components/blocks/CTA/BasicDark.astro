@@ -17,6 +17,10 @@ import Highlight from "../../ui/Highlight.astro"
 
 // Content
 import badge from "../../../assets/badge.svg"
+const date = new Date()
+const nextMonth = new Date(date.getFullYear(), date.getMonth() + 1)
+const monthAfterNext = new Date(date.getFullYear(), date.getMonth() + 2)
+const monthRange = `${nextMonth.toLocaleString("default", { month: "long" })}-${monthAfterNext.toLocaleString("default", { month: "long" })}`
 ---
 
 <Section>
@@ -37,7 +41,7 @@ import badge from "../../../assets/badge.svg"
             <span
               class='relative inline-flex rounded-full size-3 bg-light-emerald'
             ></span>
-          </span>Now accepting new projects for early 2026
+          </span>Now accepting new projects for {monthRange} 2026
         </div>
         <Button size='lg' variant='default' type='link' href='/contact'
           >Get in touch</Button
