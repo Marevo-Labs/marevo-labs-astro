@@ -70,11 +70,11 @@ const {
     required={required}
     disabled={disabled}
     value={value}
-    class="input__field peer focus:border-primary-500 relative h-12 w-full rounded border border-zinc-200 px-4 text-zinc-500 placeholder-transparent transition-all outline-none autofill:bg-white invalid:border-destructive invalid:text-destructive focus:outline-none invalid:focus:border-destructive focus-visible:outline-none disabled:cursor-not-allowed disabled:bg-zinc-50 disabled:text-zinc-400 dark:border-zinc-800 dark:bg-zinc-900 dark:autofill:bg-zinc-900 dark:disabled:bg-zinc-600"
+    class="input__field peer focus:border-primary-500 relative h-12 w-full rounded border border-zinc-200 px-4 text-zinc-500 placeholder-transparent transition-all outline-none autofill:bg-white focus:outline-none focus-visible:outline-none disabled:cursor-not-allowed disabled:bg-zinc-50 disabled:text-zinc-400 dark:border-zinc-800 dark:bg-zinc-900 dark:autofill:bg-zinc-900 dark:disabled:bg-zinc-600"
   />
   <label
     for={id}
-    class={`input__label peer-focus:text-primary-500 absolute -top-2 left-2 z-[1] cursor-text px-2 text-xs text-zinc-400 transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-autofill:-top-2 peer-invalid:text-destructive peer-focus:-top-2 peer-focus:cursor-default peer-focus:text-xs peer-invalid:peer-focus:text-destructive peer-disabled:cursor-not-allowed peer-disabled:text-zinc-400 before:absolute before:top-0 before:left-0 before:z-[-1] before:block before:h-full before:w-full before:bg-white before:transition-all peer-disabled:before:bg-transparent peer-required:after:text-destructive peer-required:after:content-['\x00a0*'] dark:before:bg-zinc-900 ${iconPosition === "lead" ? "peer-placeholder-shown:left-10 peer-focus:left-2" : ""}`}
+    class={`input__label peer-focus:text-primary-500 absolute -top-2 left-2 z-[1] cursor-text px-2 text-xs text-zinc-400 transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-autofill:-top-2 peer-focus:-top-2 peer-focus:cursor-default peer-focus:text-xs peer-disabled:cursor-not-allowed peer-disabled:text-zinc-400 before:absolute before:top-0 before:left-0 before:z-[-1] before:block before:h-full before:w-full before:bg-white before:transition-all peer-disabled:before:bg-transparent peer-required:after:text-muted-foreground peer-required:after:content-['\x00a0*'] dark:before:bg-zinc-900 ${iconPosition === "lead" ? "peer-placeholder-shown:left-10 peer-focus:left-2" : ""}`}
   >
     {label}
   </label>
@@ -88,7 +88,7 @@ const {
   }
   {
     helperText && (
-      <small class="input__helper-text absolute flex w-full justify-between px-4 py-1 text-xs text-zinc-400 transition peer-invalid:text-destructive">
+      <small class="input__helper-text absolute flex w-full justify-between px-4 py-1 text-xs text-zinc-400 transition">
         <span> {helperText} </span>
       </small>
     )

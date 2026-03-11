@@ -28,7 +28,6 @@ const formName = name || id || undefined;
 <form
   method={method}
   action={action}
-  novalidate
   class:list={[{ [`${classes}`]: classes }]}
   id={id}
   name={formName}
@@ -36,6 +35,11 @@ const formName = name || id || undefined;
 >
   {netlify && formName && (
     <input type="hidden" name="form-name" value={formName} />
+  )}
+  {netlify && (
+    <p class="absolute -left-[9999px] [&:focus]:left-auto [&:focus]:top-auto" aria-hidden="true">
+      <label>Don’t fill this out if you’re human: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+    </p>
   )}
   <slot />
 </form>
