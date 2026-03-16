@@ -1,0 +1,68 @@
+---
+// Meet the Team Section
+// ------------
+// Description: A section introducing the team with avatar images and a brief blurb, linking to the About page.
+
+// Components
+// - Layout
+import Section from "../../ui/Section.astro"
+import Row from "../../ui/Row.astro"
+import Col from "../../ui/Col.astro"
+// - UI
+import { Image } from "astro:assets"
+import Button from "../../ui/button.astro"
+
+// Assets
+import kevinImage from "../../../assets/avatars/kevin.png"
+import tonyImage from "../../../assets/avatars/tony.png"
+---
+
+<Section>
+  <Row>
+    <Col span='1' />
+    <Col span='10'>
+      <div
+        class:list={[
+          "flex flex-col items-center justify-center gap-8 rounded border border-zinc-100 bg-zinc-100 bg-cover bg-center p-8 text-center shadow-2xl shadow-zinc-600/20 lg:p-16 dark:border-zinc-800 dark:bg-zinc-900",
+        ]}
+      >
+        <div class='flex items-center -space-x-4'>
+          <Image
+            src={kevinImage}
+            alt='Kevin S.'
+            width={80}
+            height={80}
+            class='rounded-full border-4 border-background'
+          />
+          <Image
+            src={tonyImage}
+            alt='Tony M.'
+            width={80}
+            height={80}
+            class='rounded-full border-4 border-background'
+          />
+        </div>
+        <h2 class='text-pretty font-decimal text-4xl'>
+          Meet <strong class='text-primary'>Kevin</strong> & <strong
+            class='text-primary'>Tony</strong
+          >
+        </h2>
+        <p class='max-w-4xl text-lg leading-relaxed text-muted-foreground'>
+          We're two software engineers from Metro Detroit who've worked together
+          at five different companies, from startups to Fortune 500 companies.
+          Now we've teamed up to focus on helping our local businesses and
+          communities with thoughtful web and mobile applications.
+        </p>
+        <div class='flex items-center gap-4'>
+          <Button size='lg' variant='default' type='link' href='/about'>
+            Learn more about us
+          </Button>
+          <Button size='lg' variant='outline' type='link' href='/mission'>
+            Our mission
+          </Button>
+        </div>
+      </div>
+    </Col>
+    <Col span='1' />
+  </Row>
+</Section>
