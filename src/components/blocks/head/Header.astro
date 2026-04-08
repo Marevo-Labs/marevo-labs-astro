@@ -144,5 +144,35 @@ const {
         <meta name={name} content={String(content)} />
       ))
   }
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Marevo Labs",
+    "url": "https://marevo-labs.dev",
+    "logo": "https://marevo-labs.dev/logomark.svg",
+    "description": configData.siteDescription,
+    "areaServed": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 42.15,
+        "longitude": -84.04
+      },
+      "geoRadius": "50000"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Manchester",
+      "addressRegion": "MI",
+      "addressCountry": "US"
+    },
+    "knowsAbout": [
+      "Web Development",
+      "Mobile App Development",
+      "UI/UX Design",
+      "SEO Optimization"
+    ],
+    "sameAs": []
+  })} />
   <ClientRouter fallback="swap" />
 </head>
