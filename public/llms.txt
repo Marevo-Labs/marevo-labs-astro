@@ -8,10 +8,10 @@ Our approach is partnership-driven and educational. We focus on clear communicat
 
 ## Pages
 
-- [Home](https://marevo-labs.dev/)
-- [About](https://marevo-labs.dev/about)
-- [Mission](https://marevo-labs.dev/mission)
-- [Services](https://marevo-labs.dev/services)
-- [Pricing](https://marevo-labs.dev/pricing)
-- [FAQs](https://marevo-labs.dev/faqs)
-- [Contact](https://marevo-labs.dev/contact)
+- [Home](https://marevo-labs.dev/home.md)
+- [About](https://marevo-labs.dev/about.md)
+- [Mission](https://marevo-labs.dev/mission.md)
+- [Services](https://marevo-labs.dev/services.md)
+- [Pricing](https://marevo-labs.dev/pricing.md)
+- [FAQs](https://marevo-labs.dev/faqs.md)
+- [Contact](https://marevo-labs.dev/contact.md)
