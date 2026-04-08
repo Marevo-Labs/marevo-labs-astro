@@ -1,0 +1,17 @@
+# Marevo Labs
+
+> Web and mobile development for local businesses in Southeastern Michigan.
+
+Marevo Labs is a web and mobile application development agency based in Southeastern Michigan, founded by two experienced software engineers — Kevin S. (Northville, MI) and Tony M. (Manchester, MI). We partner with small to mid-sized businesses in the Ann Arbor, Plymouth, Canton, Novi, Saline, Dexter, Chelsea, Northville, Manchester, and surrounding areas to build modern, custom digital solutions.
+
+Our approach is partnership-driven and educational. We focus on clear communication, customized solutions, and empowering local businesses with technology they might not otherwise have access to.
+
+## Pages
+
+- [Home](https://marevo-labs.dev/)
+- [About](https://marevo-labs.dev/about)
+- [Mission](https://marevo-labs.dev/mission)
+- [Services](https://marevo-labs.dev/services)
+- [Pricing](https://marevo-labs.dev/pricing)
+- [FAQs](https://marevo-labs.dev/faqs)
+- [Contact](https://marevo-labs.dev/contact)
