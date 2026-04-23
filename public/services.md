@@ -2,7 +2,7 @@
 
 > Professional Web Design & Development Services
 
-At Marevo Labs, we do things a little differently. Instead of using site builders, we write 100% of the code for our sites from top to bottom.
+At Marevo Labs, we bring a wealth of knowledge and expertise to every project. We don't just build websites, we build solutions that help your business thrive.
 
 ## Web Design & Development
 

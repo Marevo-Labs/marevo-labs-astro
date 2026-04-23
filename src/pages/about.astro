@@ -6,8 +6,8 @@ import Layout from "../layouts/Layout.astro"
 import { Image } from "astro:assets"
 import SidebarContent from "../components/blocks/basic/StickySidebar.astro"
 import Hero from "../components/blocks/hero/PageHeader.astro"
-import kevinImage from "../assets/avatars/kevin.png"
-import tonyImage from "../assets/avatars/tony.png"
+import kevinImage from "../assets/avatars/kevin-egg-chair-cropped.jpg"
+import tonyImage from "../assets/avatars/tony-egg-chair-cropped.jpg"
 import Button from "../components/ui/button.astro"
 // Content
 // - SEO
@@ -83,6 +83,8 @@ const header = {
           alt='Kevin S.'
           width={100}
           height={100}
+          densities={[1, 2, 3]}
+          quality={95}
           class='rounded-full'
         />
         <p class='text-lg leading-relaxed text-muted-foreground'></p>
@@ -120,6 +122,8 @@ const header = {
           alt='Tony M.'
           width={100}
           height={100}
+          densities={[1, 2, 3]}
+          quality={95}
           class='rounded-full'
         />
       </div>

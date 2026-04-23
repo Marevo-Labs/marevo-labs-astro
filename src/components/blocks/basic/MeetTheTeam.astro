@@ -13,8 +13,8 @@ import { Image } from "astro:assets"
 import Button from "../../ui/button.astro"
 
 // Assets
-import kevinImage from "../../../assets/avatars/kevin.png"
-import tonyImage from "../../../assets/avatars/tony.png"
+import kevinImage from "../../../assets/avatars/kevin-egg-chair-cropped.jpg"
+import tonyImage from "../../../assets/avatars/tony-egg-chair-cropped.jpg"
 ---
 
 <Section>
@@ -30,15 +30,19 @@ import tonyImage from "../../../assets/avatars/tony.png"
           <Image
             src={kevinImage}
             alt='Kevin S.'
-            width={80}
-            height={80}
+            width={144}
+            height={144}
+            densities={[1, 2, 3]}
+            quality={95}
             class='rounded-full border-4 border-background'
           />
           <Image
             src={tonyImage}
             alt='Tony M.'
-            width={80}
-            height={80}
+            width={144}
+            height={144}
+            densities={[1, 2, 3]}
+            quality={95}
             class='rounded-full border-4 border-background'
           />
         </div>
