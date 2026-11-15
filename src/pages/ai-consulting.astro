@@ -1,0 +1,209 @@
+---
+// Components
+// - Layout
+import Layout from "../layouts/Layout.astro"
+import Section from "../components/ui/Section.astro"
+import Row from "../components/ui/Row.astro"
+import Col from "../components/ui/Col.astro"
+// - UI
+import Hero from "../components/blocks/hero/PageHeader.astro"
+import FeatureSticky from "../components/blocks/features/FeatureSticky.astro"
+import Feature from "../components/ui/Feature.astro"
+import Accordion from "../components/ui/Accordion.astro"
+import Card from "../components/ui/cards/partials/Card.astro"
+import CTAContainer from "../components/ui/CTA.astro"
+import Button from "../components/ui/button.astro"
+
+// Content
+// - SEO
+const SEO = {
+  title: "AI Consulting for Local Businesses | Marevo Labs",
+  description:
+    "Practical AI consulting for existing businesses in Northville, Manchester, and Southeastern Michigan. We find where AI fits into the work you already do, then help you put it in place. Start with a free intro call.",
+}
+
+// - Page Header
+const header = {
+  title:
+    "<strong class='text-primary'>Practical AI</strong> for the business you already run",
+  text: "You don't need to reinvent your company to get value from AI. We look at the work your team already does, find the steps that eat the most time, and help you add AI where it actually pays off. No hype, no lock-in, and you stay in control of your data.",
+}
+
+// - What we do
+const services = [
+  {
+    title: "Workflow Review",
+    icon: "clipboard-document-list",
+    description:
+      "We sit down with you and the people doing the work to map how things get done today: quoting, scheduling, intake, follow-ups, bookkeeping, and customer questions. That map shows where AI can help and where it can't.",
+  },
+  {
+    title: "Paperwork & Data Entry",
+    icon: "document-text",
+    description:
+      "Pull details out of emails, invoices, forms, and PDFs and get them into the systems you already use, so your team stops retyping the same information.",
+  },
+  {
+    title: "Customer Communication",
+    icon: "chat-bubble-left-right",
+    description:
+      "Draft replies, answer common questions, and summarize long threads, with a person reviewing anything that goes out the door.",
+  },
+  {
+    title: "Fits Your Existing Tools",
+    icon: "squares-plus",
+    description:
+      "We connect AI to the software you already pay for, like your email, spreadsheets, CRM, or accounting system, instead of asking you to switch platforms.",
+  },
+  {
+    title: "Data & Privacy First",
+    icon: "shield-check",
+    description:
+      "We agree up front on what data AI tools can see, where it's stored, and who can access it. Sensitive client and financial information gets handled with care.",
+  },
+  {
+    title: "Training & Handoff",
+    icon: "user-group",
+    description:
+      "We show your team how to use what we set up, write down how it works, and make sure you can keep it running without us.",
+  },
+]
+
+// - How an engagement works
+const steps = [
+  {
+    step: "Step 1",
+    title: "Free intro call",
+    icon: "phone-arrow-up-right",
+    description:
+      "A free 30-minute conversation about your business, where your team's time goes, and what you've heard about AI. No pitch deck and no obligation. If AI isn't a good fit yet, we'll tell you.",
+  },
+  {
+    step: "Step 2",
+    title: "Paid discovery",
+    icon: "light-bulb",
+    description:
+      "A short, fixed-scope engagement, quoted before we start. We review your workflows and systems up close and deliver a written plan: the best opportunities, what each would take, and the expected payoff.",
+  },
+  {
+    step: "Step 3",
+    title: "Build & support",
+    icon: "rocket",
+    description:
+      "If you want to move forward, we implement the highest-value item first, measure the result against where you started, and build from there at a pace that works for you.",
+  },
+]
+
+// - FAQ
+const faqs = [
+  {
+    question: "Do we need to be a tech company to use AI?",
+    reply:
+      "No. Most of the value we look for is in everyday work: answering the same questions, moving information between systems, and writing routine documents. If your team uses email and spreadsheets, there's likely something worth looking at.",
+  },
+  {
+    question: "Why is the intro call free but discovery paid?",
+    reply:
+      "The intro call is for both of us to decide whether it's worth going further. Discovery is real work: we spend time with your team and your systems and hand you a written plan you can use with or without us.",
+  },
+  {
+    question: "What happens to our data?",
+    reply:
+      "We agree on data handling before we touch anything. We favor tools and settings that don't use your data to train outside models, and we keep sensitive information out of AI tools when it isn't needed.",
+  },
+  {
+    question: "Will AI replace our staff?",
+    reply:
+      "That isn't our goal. We focus on taking repetitive work off your team's plate so they can spend more time on customers and the parts of the job that need a person.",
+  },
+  {
+    question: "Where do you work?",
+    reply:
+      "We're based in Northville and Manchester and work with businesses across Southeastern Michigan. We're happy to meet in person locally, and we also work remotely.",
+  },
+]
+---
+
+<Layout title={SEO.title} description={SEO.description}>
+  <Hero title={header.title} text={header.text} />
+
+  <FeatureSticky
+    title='What we do'
+    text='We help existing businesses add AI to the workflows they already have, starting with the work that takes the most time.'
+    data={services}
+  />
+
+  <Section id='how-it-works' classes='bg-zinc-50 dark:bg-zinc-900'>
+    <Row>
+      <Col
+        span='12'
+        align='center'
+        classes='mb-12 max-w-4xl mx-auto space-y-8'
+      >
+        <h2 class='text-pretty font-heading text-4xl sm:text-5xl md:text-6xl'>
+          How an engagement <strong class='text-primary'>works</strong>
+        </h2>
+        <p class='text-lg leading-relaxed text-muted-foreground'>
+          Start small, see real results, then decide what's next. You'll know
+          the scope and cost of each step before we begin.
+        </p>
+      </Col>
+    </Row>
+    <Row>
+      {
+        steps.map((item) => (
+          <Col span='4'>
+            <Feature title={item.title} icon={item.icon} align='left'>
+              <span class='mb-2 block font-gotham text-sm uppercase tracking-wide text-primary'>
+                {item.step}
+              </span>
+              {item.description}
+            </Feature>
+          </Col>
+        ))
+      }
+    </Row>
+  </Section>
+
+  <Section id='faq'>
+    <Row>
+      <Col
+        span='12'
+        align='center'
+        classes='mb-12 max-w-4xl mx-auto space-y-8'
+      >
+        <h2 class='text-pretty font-heading text-4xl sm:text-5xl md:text-6xl'>
+          Common <strong class='text-primary'>questions</strong>
+        </h2>
+      </Col>
+      <Col span='2' />
+      <Col span='8'>
+        <Card classes='divide-y divide-zinc-100 dark:divide-zinc-800'>
+          {
+            faqs.map((faq) => (
+              <Accordion title={faq.question} text={faq.reply} open={false} />
+            ))
+          }
+        </Card>
+      </Col>
+      <Col span='2' />
+    </Row>
+  </Section>
+
+  <Section id='book'>
+    <Row>
+      <Col span='1' />
+      <Col span='10'>
+        <CTAContainer
+          title="Curious where AI fits in your business? <strong class='text-primary'>Let's talk.</strong>"
+          text="Book a free 30-minute intro call. Tell us a little about your business in the form, and we'll reach out within one business day to set up a time."
+        >
+          <Button size='lg' variant='default' type='link' href='/contact'
+            >Book a free intro call</Button
+          >
+        </CTAContainer>
+      </Col>
+      <Col span='1' />
+    </Row>
+  </Section>
+</Layout>

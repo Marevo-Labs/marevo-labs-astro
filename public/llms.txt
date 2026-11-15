@@ -12,6 +12,7 @@ Our approach is partnership-driven and educational. We focus on clear communicat
 - [About](https://marevo-labs.dev/about.md)
 - [Mission](https://marevo-labs.dev/mission.md)
 - [Services](https://marevo-labs.dev/services.md)
+- [AI Consulting](https://marevo-labs.dev/ai-consulting.md)
 - [Pricing](https://marevo-labs.dev/pricing.md)
 - [FAQs](https://marevo-labs.dev/faqs.md)
 - [Contact](https://marevo-labs.dev/contact.md)
