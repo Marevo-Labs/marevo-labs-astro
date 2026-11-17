@@ -2,13 +2,15 @@
 type Props = {
   width: number
   height: number
+  class?: string
 }
-const { width, height } = Astro.props
+const { width, height, class: className } = Astro.props
 ---
 
 <svg
   width={width}
   height={height}
+  class={className}
   viewBox="0 0 1537 172"
   fill="none"
   xmlns="http://www.w3.org/2000/svg"
